@@ -1,0 +1,59 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("/static/images/background.jpg");
+}
+.user_card {
+    width: 370px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: #ffffff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+#form-title{
+    color: #444444;
+}
+.form_container {
+    margin-top: 20px;
+}
+
+.login_btn {
+    width: 100%;
+    background: #1284da ;
+    color: #ffffff ;
+}
+.login_btn:hover {
+    outline: 0px ;
+    color: #ffffff ;
+    transform: scale(1.05) ;
+    transform: translate3d(0, 3px, 0);
+} 
+.login_btn:focus {
+    outline: 0px ;
+    color: #ffffff ;
+}
+
+.input-group-text {
+    background: #bcbcbc ;
+    color: white ;
+    border: 0 ;
+    border-radius: 0.25rem 0 0 0.25rem ;
+}
+.login_container {
+    padding: 0 2rem;
+}
+.input_user,
+.input_pass:focus {
+    box-shadow: none ;
+    outline: 0px ;
+}

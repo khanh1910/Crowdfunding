@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block title %}Đăng ký{% endblock %}
+{% block content %}
+
+<div class="d-flex justify-content-center h-100">
+	<div class="user_card">
+		<div class="d-flex justify-content-center">
+			<h3 id="form-title" style='font-size: 20px'>ĐĂNG KÝ</h3>
+		</div>
+		<div class="d-flex justify-content-center form_container">
+			<form method="POST" action="">
+				{% csrf_token %}
+				<div class="input-group mb-3"> 
+					<div class="input-group-append">
+						<span class="input-group-text"><i class="fa-sharp fa-solid fa-user"></i></span>
+					</div>
+					{{ form.username }}
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-append">
+						<span class="input-group-text"><i class="fa-solid fa-circle-info"></i></span>
+					</div>
+					{{ form.first_name }}
+					{{ form.last_name }}
+				</div>
+				<div class="input-group mb-3"> 
+					<div class="input-group-append">
+						<span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+					</div>
+					{{ form.email }}
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-append">
+						<span class="input-group-text"><i class="fa-sharp fa-solid fa-key"></i></span>
+					</div>
+					{{ form.password1 }}
+				</div>
+				<div class="input-group mb-3">
+					<div class="input-group-append">
+						<span class="input-group-text"><i class="fa-sharp fa-solid fa-key"></i></span>
+					</div>
+					{{ form.password2 }}
+				</div>
+                <div class="d-flex justify-content-center mt-3 login_container">
+                    <input class="btn login_btn" type="submit" value="Đăng ký">
+                </div>
+			</form>
+		</div>
+
+		{% comment %} {{ form.errors }} 
+		<script>
+		</script> {% endcomment %}
+		<ul>
+			{% for field, errors in form.errors.items %}
+			{% for error in errors %}
+				<li> {{ error }} </li>
+			{% endfor %}
+			{% endfor %}
+		</ul>
+
+		<div class="mt-2">
+			<div class="d-flex justify-content-center links">
+				<a href="{% url 'login' %}" class="ml-2">Đăng nhập</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script >
+	var form_fields = document.getElementsByTagName('input')
+	form_fields[1].placeholder='Tài khoản';
+	form_fields[2].placeholder='Tên';
+	form_fields[3].placeholder='Họ';
+	form_fields[4].placeholder='Email';
+	form_fields[5].placeholder='Mật khẩu';
+	form_fields[6].placeholder='Xác nhận mật khẩu';
+	for (var field in form_fields){
+		form_fields[field].className += ' form-control'
+	}
+</script>
+
+{% endblock %}

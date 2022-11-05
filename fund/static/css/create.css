@@ -1,0 +1,227 @@
+
+*{
+	font-family: Georgia;
+}
+body{
+	padding: 0;
+	margin: 0
+}
+
+.bg-image {
+	background-image: url("/static/images/imbg2.jpg");
+
+	margin: 0;
+	padding: 20px 0;
+	width: 100%;
+	height: 100%; 
+	
+	background-size: cover;
+	position: absolute;
+	background-position: center;
+}
+
+.topicDetail, select{
+	padding: 5px 5px 5px 5px;
+	width: 100%;
+	height: 50px;
+	border: 0px solid black;
+	border-radius: 10px;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.topicDetail{
+	width: 97%;
+	height: 45px;
+	margin: 0px 0 10px 0;
+	text-align: left;
+}
+
+.line1{
+	margin: 10px 0 0 0;
+	width: 100%;
+}
+
+#form1 .line1{
+	margin-bottom: 20px;
+}
+
+h3{
+	margin: 50px;
+	color: white;
+	text-align: center;
+}
+
+button{
+	margin: 20px 20px;
+	width: 90px;
+	height: 30px;
+	border-radius: 10px;
+	background: linear-gradient(to right, #348F50,#56B4D3);
+	color: white;
+	border: 0px solid orange;
+	cursor: pointer;
+	text-align: center;
+}
+.buttonBox{
+	margin: 210px auto;
+	width: 100%;
+	text-align: center;
+ }
+
+.box{
+	width: 360px;
+	height: 570px;
+	position: relative;
+	margin: 0px auto ;
+	padding: 20px;
+	overflow: hidden;
+	transform: translate(0, 50px);
+
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 3);
+	backdrop-filter: blur(7.5px);
+	-webkit-backdrop-filter: blur(7.5px);
+
+}
+
+.box form{
+	margin: 0 auto 0 30px;
+	width: 300px;
+	position: absolute;
+	transition: 0.5s;
+	
+}
+
+#form1 .buttonBox{
+	transform: translate(0, -30px);
+}
+
+#form2 .buttonBox{
+	margin: 275px auto;
+}
+
+#form3 .buttonBox{
+	margin: auto;
+	transform: translate(0, 125px);
+}
+
+#form1{
+	transform: translate(0, 30px);
+}
+
+#form2{
+	left: 450px;
+	transform: translate(0, 30px);
+}
+
+#form3{
+	left: 450px;
+	text-align: left;
+	transform: translate(0, 30px);
+}
+
+.pTarget{
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+}
+
+.selectDay{
+	width: 100%;
+	height: 45px;
+	border-radius: 10px;
+	border: 0;
+}
+
+.moneyTarget{
+	width: 97%;
+	height: 45px;
+	margin: 0 0 10px 0;
+	text-align: left;
+	border-radius: 10px;
+	border: 0;
+}
+
+.stepRow{
+	width: 300px;
+	height: 39px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	box-shadow: 0 -1px 5px -1pxi #000;
+	position: inherit;
+}
+
+.stepCol{
+	width: 100px;
+	text-align: center;
+	color: white;
+	position: relative;
+}
+
+#process{
+	position: absolute;
+	height: 100%;
+	width: 100px;
+	background: linear-gradient(to right, #348F50ed, #56B4D3);
+	color: white;
+	transition: 0.5s;
+}
+
+#process::after{
+	content: '';
+	width: 0;
+	height: 0;
+	border-top: 19px solid transparent;
+	border-bottom: 19px solid transparent;
+	position: absolute;
+	right: -20px;
+	top: 0;
+	border-left: 20px solid #56B4D3;
+
+}
+.plcTitle{
+	margin: 10px 10px 5px 10px;
+	text-align: left;
+
+}
+.plcContent{
+	margin: 0 10px 0 10px;
+	text-align: justify;
+	font-size: 13px;
+}
+.plc{
+	width: 100%;
+	height: 350px;
+	background: white;
+	margin: 50px auto auto auto;
+	border: 0px solid black;
+	border-radius: 5px;
+	box-shadow: -10px;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+/* scrool bar design */
+::-webkit-scrollbar {
+	width: 10px;
+ }
+ 
+ /* Track */
+ ::-webkit-scrollbar-track {
+	border-radius: 30px;
+	
+ }
+  
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+	
+	background: grey; 
+	border-radius: 10px;
+ }
+ 
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+	background: #343434; 
+ }

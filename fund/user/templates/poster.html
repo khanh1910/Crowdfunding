@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load static %}
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'css/poster.css' %}">
+	<title>PosterDesign</title>
+</head>
+<body>
+	<div class="bg-image"></div>
+	<div class="contentBox">
+		<div class="introProject">
+			<input type="text" class="intro" placeholder="Topic of your project" >
+		</div>
+		<div class="projectDescrip">
+			<textarea name="Text1" class="inputContent"></textarea>
+		</div>
+		<div class="mediaBox">
+			<div class="media">
+				<button type="button" id="picture"></button>
+				<p> <small>Picture</small> </p>
+			</div>
+			<div class="media">
+				<button type="button" id="video"></button>
+				<p><small>Video</small></p>
+			</div>
+			<div class="media">
+				<button type="submit" id="submit">POST</button>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

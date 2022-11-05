@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <script src="https://kit.fontawesome.com/027f8c7675.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Gọi vốn</title>
+	<link rel="stylesheet" href = "{% static 'css/index.css' %}" type="text/css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+                <div class="header-top">
+                    <a href="" id="logo">π/2</a>
+                    <ul>
+                        <li><a href="">Về chúng tôi</a></li>
+                        <li><a href="">Tin tức</a></li>
+                        <li><a href="">Dự án</a></li>
+                        <li><a href="">Các dự án thành công</a></li>
+                        {% if user.username %}
+                            <li style='margin-right: 2px; text-decoration: none'> Xin chào {{user.first_name}} {{user.last_name}}</li>| 
+                            <li style='margin-left: 2px'><a href="{% url 'logout' %}">Đăng xuất</a></li>
+                        {% else %}
+                            <li style='margin-right: 2px'><a href="{% url 'register' %}">Đăng ký</a> </li>|
+                            <li style='margin-left: 2px'><a href="{% url 'login' %}">Đăng nhập</a> </li>
+                        {% endif %}
+                    </ul>
+                    </div>
+                    <form class="search-bar">
+                        <input type="text" placeholder="Tìm kiếm gì đó ...">
+                        <button type="submit"><img src="{% static 'images/search-icon2.png' %}"></button>
+                    </form>
+                    <ul class="data">
+                        <li>
+                            <h3>129838</h3>
+                            Người tham gia
+                        </li>
+                        <li>
+                            <h3>41234120 đ</h3>
+                            Được ủng hộ
+                        </li>
+                        <li>
+                            <h3>231</h3>
+                            Dự án
+                        </li>
+                    </ul>
+                    <div class="header-left">
+                        <h1>Gọi vốn cộng đồng</h1>
+                        <h3>Mọi người đều có thể đầu tư cho dự án của bạn</h3>
+                        <button type="button" onclick=" location.href='create' " >Bắt đầu ngay</button>
+                    </div>
+        </div>
+        <hr class="hr1"> 
+        <div class="content">
+            <div class="our-value">
+                <h1 class="header-content1">Giá trị của chúng tôi</h1>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        <h3>Khơi nguồn đổi mới sáng tạo</h3>
+                        <p>Nền tảng được thiết kế dành riêng cho những dự án khởi nghiệp đổi mới sáng tạo với mong muốn đưa sản phẩm đến với khách hàng</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-people-group"></i>
+                        <h3>Gắn kết cộng đồng</h3>
+                        <p>Gắn kết các dự án với doanh nghiệp, nhà đầu tư, cộng đồng người ủng hộ và đưa các dự án Việt có ý nghĩa đến với cộng đồng và thế giới</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <h3>Trải nghiệm những ý tưởng mới</h3>
+                        <p>Cơ hội dành cho cộng đồng được trải nghiệm những sản phẩm đầy tính sáng tạo, góp phần thúc đẩy sự phát triển cộng đồng khởi nghiệp</p>
+                    </li>
+                </ul>
+            </div>
+            <hr class="hr2">
+            <div class="category">
+                <h2 class="cateh2">Bạn đang quan tâm đến lĩnh vực nào?</h2>
+                <div class="ct">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-microchip"></i>
+                                <h2>Công nghệ</h2> 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-taxi"></i>
+                                <h2>Dịch vụ</h2> 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-solid fa-plane"></i>
+                                <h2>Du lịch</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="fa-sharp fa-solid fa-wheat-awn"></i>
+                                <h2>Nông nghiệp</h2>  
+                            </a>
+                        </li>
+                        <li>    
+                            <a href="">
+                                <i class="fa-solid fa-school"></i>
+                                <h2>Giáo dục</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </div>      
+            </div>
+            <div class="success-project">
+                <h2 class="succ-h">Dự án thành công</h2>
+                <div class="sprojects">
+                    <div class="item">
+                        <img src="{% static 'images/box.jpg' %}" alt="">
+                        <div class="item-content">
+                            <div class="item-detail">
+                                <h3 class="item-name">Hộp tự gói nhanh</h3>
+                                <p>Chiếc hộp có khả năng tự đóng gói nhanh là sản phẩm vô cùng tiện lợi giúp tiết kiệm thời gian và công sức khi gói hàng</p>
+                            </div>
+                            <div class="progress">
+                                <div class="raised">
+                                    <span>₫76,700,000 Raised</span>
+                                    <span>153.40%</span>
+                                </div>
+                                <progress max="100" value="150"></progress>
+                                <div class="raised">
+                                    <span>₫50,000,000</span>
+                                    <span>0 Days to Goal</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="">Xem chi tiết</a>
+                    </div>
+                <div class="item">
+                    <img src=" {% static 'images/taptheduc.jpg' %} " alt="">
+                    <div class="item-content">
+                        <div class="item-detail">
+                            <h3 class="item-name">Hộp tự gói nhanh</h3>
+                            <p>Chiếc hộp có khả năng tự đóng gói nhanh là sản phẩm vô cùng tiện lợi giúp tiết kiệm thời gian và công sức khi gói hàng</p>
+                        </div>
+                        <div class="progress">
+                            <div class="raised">
+                                <span>₫76,700,000 Raised</span>
+                                <span>153.40%</span>
+                            </div>
+                            <progress max="100" value="100"></progress>
+                            <div class="raised">
+                                <span>₫50,000,000</span>
+                                <span>0 Days to Goal</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <a href="">Xem chi tiết</a>
+                </div>
+                <div class="item">
+                        <img src=" {% static 'images/banhngot.jpg' %}" alt="">
+                        <div class="item-content">
+                            <div class="item-detail">
+                                <h3 class="item-name">Hộp tự gói nhanh</h3>
+                                <p>Chiếc hộp có khả năng tự đóng gói nhanh là sản phẩm vô cùng tiện lợi giúp tiết kiệm thời gian và công sức khi gói hàng</p>
+                            </div>
+                            <div class="progress">
+                                <div class="raised">
+                                    <span>₫76,700,000 Raised</span>
+                                    <span>153.40%</span>
+                                </div>
+                                <progress max="100" value="150"></progress>
+                                <div class="raised">
+                                    <span>₫50,000,000</span>
+                                    <span>0 Days to Goal</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="">Xem chi tiết</a>
+                </div>
+                <div class="item">
+                    <img src=" {% static 'images/trongcay.png' %}" alt="">
+                    <div class="item-content">
+                        <div class="item-detail">
+                            <h3 class="item-name">Hộp tự gói nhanh</h3>
+                            <p>Chiếc hộp có khả năng tự đóng gói nhanh là sản phẩm vô cùng tiện lợi giúp tiết kiệm thời gian và công sức khi gói hàng</p>
+                        </div>
+                        <div class="progress">
+                            <div class="raised">
+                                <span>₫76,700,000 Raised</span>
+                                <span>153.40%</span>
+                            </div>
+                            <progress max="100" value="150"></progress>
+                            <div class="raised">
+                                <span>₫50,000,000</span>
+                                <span>0 Days to Goal</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="">Xem chi tiết</a>
+                </div>
+                </div>
+            </div>
+            <div class="new">
+                <h2 class="news-head">Tin tức mới</h2>
+                <div class="news">
+                    <div class="new-item">
+                        <img src="{% static 'images/shark.jpg' %}" alt="">
+                        <div class="new-content">
+                            <div class="new-detail">
+                                <h3 class="new-name">Shark Tank Việt Nam: Cá mập lên gọi vốn hộ startup, 3 Shark còn lại không ngần ngại rót mỗi người 2 triệu USD</h3>
+                                <p>Startup mà Shark Dzung có ghế trong HĐQT là startup đầu tiên mở màn Shark Tank Việt Nam mùa 3.</p>
+                            </div>
+                            <a href="">Xem thêm..</a>
+                        </div>
+                    </div>
+                    <div class="new-item">
+                        <img src="{% static 'images/dongho.jpg' %}" alt="">
+                        <div class="new-content">
+                            <div class="new-detail">
+                                <h3 class="new-name">Shark Tank Việt Nam: Cá mập lên gọi vốn hộ startup, 3 Shark còn lại không ngần ngại rót mỗi người 2 triệu USD</h3>
+                                <p>Startup mà Shark Dzung có ghế trong HĐQT là startup đầu tiên mở màn Shark Tank Việt Nam mùa 3.</p>
+                            </div>
+                            <a href="">Xem thêm..</a>
+                        </div>
+                    </div>
+                    <div class="new-item">
+                        <img src="{% static 'images/anhnendt1.jpg' %}" alt="">
+                        <div class="new-content">
+                            <div class="new-detail">
+                                <h3 class="new-name">Shark Tank Việt Nam: Cá mập lên gọi vốn hộ startup, 3 Shark còn lại không ngần ngại rót mỗi người 2 triệu USD</h3>
+                                <p>Startup mà Shark Dzung có ghế trong HĐQT là startup đầu tiên mở màn Shark Tank Việt Nam mùa 3.</p>
+                            </div>
+                            <a href="">Xem thêm..</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr4">
+            <div class="nrft">
+                <img src="{% static 'images/nearft.png' %} " alt="">
+                <div class="choices">
+                    <ul>
+                        <li>
+                            <h3>Khám phá các dự án mới trên π/2</h3>
+                            <button ><i class="fa-solid fa-glasses"></i> Khám phá ngay</button>
+                        </li>
+                        <li>
+                            <h3>Cùng π/2 thực hiện các ý tưởng !</h3>
+                            <button ><i class="fa-solid fa-lightbulb"></i> Bắt đầu dự án</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="hr5">
+        </div>
+        <div class="footer">
+        </div>
+    </div>
+</body>
+</html>
