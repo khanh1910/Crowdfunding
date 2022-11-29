@@ -24,7 +24,7 @@
                         <li><a href="">Dự án</a></li>
                         <li><a href="">Các dự án thành công</a></li>
                         {% if user.username %}
-                            <li style='margin-right: 2px; text-decoration: none'> Xin chào <a href="">{{user.first_name}} {{user.last_name}}</a></li>| 
+                            <li style='margin-right: 2px; text-decoration: underline'> Xin chào <a href="">{{user.first_name}} {{user.last_name}}</a></li>| 
                             <li style='margin-left: 2px'><a href="{% url 'logout' %}">Đăng xuất</a></li>
                         {% else %}
                             <li style='margin-right: 2px'><a href="{% url 'register' %}">Đăng ký</a> </li>|
