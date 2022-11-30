@@ -12,3 +12,8 @@ class Project(models.Model):
     Project_RecentFund=models.IntegerField(default=0)
     Project_DateEnd=models.DateTimeField(auto_now=True)
     Project_IsSuccessfull=models.BooleanField(default=False)
+
+class FundProject(models.Model):
+    Project_Funder=models.ForeignKey(User,on_delete=models.CASCADE)
+    Funded_Project=models.ForeignKey(Project,on_delete=models.CASCADE)
+    Funded_Money=models.IntegerField(default=0)

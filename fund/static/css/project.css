@@ -12,6 +12,9 @@ body{
     width: 100%;
     margin: 0 auto;
 }
+ul{
+    list-style: none;
+}
 .header{
     padding-top: 20px;
     height: 100px;
@@ -57,7 +60,9 @@ a{
     margin: 100px auto;
     display: flex;
     padding: 20px;
-    background-color: #dfe6e9;
+    background-color: #bbd4ed;
+    border-radius: 7px;
+    border: solid 2px #b0b2b4;
 }
 .content .left img{
     width: 550px;
@@ -87,6 +92,7 @@ a{
 }
 .content .right progress{
     margin-top: 30px;
+    margin-bottom: 50px;
     height: 15px;
     width: 500px;
     border-radius: 10px;
@@ -99,29 +105,17 @@ a{
 .content .right .owner:hover{
     color: rgb(41, 41, 203);
 }
-.content .right button{
-    margin-top: 25px;
-    padding: 5px;
-    display: block;
-    width: fit-content;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #0984e3;
-    border: #0984e3 2px solid;
-    cursor: pointer;
-    font-size: 120%;
-    color: #fff;
-}
-.content .right button:hover{
-    background-color: #fff;
-    color: #0984e3;
-}
 
+.contentbelow{
+    display: flex;
+}
 .project_content{
-    width: 90%;
-    margin: 0 auto;
+    width: 60%;
+    margin-left: 30px;
 }
 .project_content h2{
+    width: fit-content;
+    margin: 0 auto;
     margin-top : 30px;
     font-size: 220%;
 }
@@ -132,4 +126,13 @@ hr{
     width: 90%;
     margin: 0 auto;
     margin-bottom: 30px;
+}
+.fund{
+    border: solid 1px rgb(126, 124, 124);
+    border-radius: 3px;
+    background-color: #1a6fca;
+    padding: 10px;
+    width: 30%;
+    margin-left: 20px;
+    height: 300px;
 }

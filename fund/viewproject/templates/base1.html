@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
+    <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href = "{% static 'css/project.css' %}" type="text/css">
 </head>
 <body>
@@ -28,46 +28,8 @@
                 </ul>
             </div>
         </div>
-        <div class="content">
-            <div class="left">
-                <img src="/static/images/{{p.Project_Images}}" alt="">
-            </div>
-            <div class="right">
-                <div class="project">
-                    <h1 class="project_title">{{ p.Project_Title }}</h1>
-                    <i>by <a class="owner" href="">{{ p.Project_Owner }}</a></i>
-                    <p class="project_shortdescribe">{{ p.Project_ShortDescribe }}</p>
-                    <ul class="project_data">
-                        <li>
-                            <div class="fundgoal">
-                            <h5>{{p.Project_GoalFund}} $</h5>
-                            <h6>Funding goal</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="fundgoal">
-                                <h5>{{p.Project_RecentFund}} $</h5>
-                                <h6>Funding recent</h6>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="fundrecent">
-                                <h5>{{p.Project_DateEnd}}</h5>
-                                <h6>The End</h6>
-                            </div>
-                        </li>
-                    </ul>
-                    <progress class="project_progress" max="5000000" value="4000000"></progress>
-                </div>
-                <button>Góp vốn ngay</button>
-            </div>
-        </div>
-        <hr>
-        <div class="project_content">
-            <h3 class="h4_ndct">Nội dung chi tiết</h3>
-            <h2 class="title_content">{{ p.Project_Title }}</h2>
-            <p class="p_content">{{p.Project_Content}}</p>
-        </div>
+        {% block contents %}
+        {% endblock %}
     </div>    
 </body>
 </html>

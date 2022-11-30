@@ -16,7 +16,7 @@ body{
     padding-top: 20px;
     height: 700px;
     width: 100%;
-    background-image:linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.1)),url("/static/images/background2.png");
+    background-color: #076ebd;
     background-size: cover;
     background-position: center;
 }
