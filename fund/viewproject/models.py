@@ -3,15 +3,17 @@ from django.db import models
 from user.models import User
 
 class Project(models.Model):
-    Project_Title=models.CharField(max_length=50)
-    Project_ShortDescribe=models.TextField(default='',max_length=100)
-    Project_Content=models.TextField(default='')
-    Project_Owner=models.ForeignKey(User,on_delete=models.CASCADE)
-    Project_Images=models.ImageField(default='')
-    Project_GoalFund=models.IntegerField(default=0)
-    Project_RecentFund=models.IntegerField(default=0)
-    Project_DateEnd=models.DateTimeField(auto_now=True)
-    Project_IsSuccessfull=models.BooleanField(default=False)
+    Title=models.CharField(max_length=50)
+    ShortDescribe=models.TextField(default='',max_length=100)
+    Content=models.TextField(default='')
+    Owner=models.ForeignKey(User,on_delete=models.CASCADE)
+    Images=models.ImageField(default='')
+    GoalFund=models.IntegerField(default=0)
+    RecentFund=models.IntegerField(default=0)
+    DateEnd=models.DateTimeField(auto_now=True)
+    IsSuccessfull=models.BooleanField(default=False)
+    Location=models.CharField(default='',max_length=50)
+    Price=models.IntegerField(default=0)
 
 class FundProject(models.Model):
     Project_Funder=models.ForeignKey(User,on_delete=models.CASCADE)

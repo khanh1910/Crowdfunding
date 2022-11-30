@@ -74,16 +74,17 @@ a{
     width: fit-content;
 }
 .content .right .project{
-    min-height: 330px;
+    min-height: 360px;
 }
-.content .right i{
+.content .right .iown{
     display: block;
-    margin: 20px 0px 50px 0px;
+    margin: 20px 0px ;
 }
+
 .content .right .project_data{
     display: flex;
     list-style: none;
-    margin-top: 50px;
+    margin-top: 30px;
     font-size: 120%;
 }
 .content .right ul li{
@@ -91,8 +92,9 @@ a{
     margin-right:20px;
 }
 .content .right progress{
-    margin-top: 30px;
-    margin-bottom: 50px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
     height: 15px;
     width: 500px;
     border-radius: 10px;
@@ -105,7 +107,22 @@ a{
 .content .right .owner:hover{
     color: rgb(41, 41, 203);
 }
-
+.content .right .location{
+    height: fit-content;
+    margin-bottom: 10px;
+}
+.content .right button{
+    font-size: 150%;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: solid 1px #054678;
+    background-color: rgb(148, 175, 218);
+    color: #08044a;
+    cursor: pointer;
+}
+.content .right button:hover{
+    background-color: #2e86de;
+}
 .contentbelow{
     display: flex;
 }

@@ -3,49 +3,53 @@
 {% block contents %}
 <div class="content">
     <div class="left">
-        <img src="/static/images/{{p.Project_Images}}" alt="">
+        <img src="/static/images/{{p.Images}}" alt="">
     </div>
     <div class="right">
         <div class="project">
-            <h1 class="project_title">{{ p.Project_Title }}</h1>
-            <i>by <a class="owner" href="">{{ p.Project_Owner }}</a></i>
-            <p class="project_shortdescribe">{{ p.Project_ShortDescribe }}</p>
+            <h1 class="project_title">{{ p.Title }}</h1>
+            <i class="iown">by <a class="owner" href="">{{ p.Owner }}</a></i>
+            <p class="project_shortdescribe">{{ p.ShortDescribe }}</p>
             <ul class="project_data">
                 <li>
                     <div class="fundgoal">
-                    <h5>{{p.Project_GoalFund}} $</h5>
+                    <h5>{{p.GoalFund}} $</h5>
                     <h6>Funding goal</h6>
                     </div>
                 </li>
                 <li>
                     <div class="fundgoal">
-                        <h5>{{p.Project_RecentFund}} $</h5>
+                        <h5>{{p.RecentFund}} $</h5>
                         <h6>Funding recent</h6>
                     </div>
                 </li>
                 <li>
                     <div class="fundrecent">
-                        <h5>{{p.Project_DateEnd}}</h5>
+                        <h5>{{p.DateEnd}}</h5>
                         <h6>End Project</h6>
                     </div>
                 </li>
             </ul>
-            <progress class="project_progress" max="{{p.Project_GoalFund}}" value="{{p.Project_RecentFund}}"></progress>
+            <progress class="project_progress" max="{{p.GoalFund}}" value="{{p.RecentFund}}"></progress>
+            <div class="location"><i class="fa-solid fa-location-dot"></i><span> {{p.Location}}</span></div>
+            <h3>Đã có {{p.fundproject_set.all.count}} người tham gia góp vốn</h3>
         </div>
-        <h3>Đã có {{p.fundproject_set.all.count}} người tham gia góp vốn</h3>
+        <button>Góp vốn</button>
     </div>
 </div>
 <hr>
 <div class="contentbelow">
     <div class="project_content">
         <h3 class="h4_ndct">Nội dung chi tiết</h3>
-        <h2 class="title_content">{{ p.Project_Title }}</h2>
-        <p class="p_content">{{p.Project_Content}}</p>
+        <h2 class="title_content">{{ p.Title }}</h2>
+        <p class="p_content">{{p.Content}}</p>
     </div>
     <div class="fund">
-        <form action="" method="post">
+        <p>Số tiền bạn đang có : {{user.Money}}</p>
+        <p>Giá 1 sản phẩm : {{p.Price}}</p>
+        <form action="{% url 'hoho1' %}" method="post">
             {% csrf_token %}
-            <input type="number" name="number" min="0">
+            <input type="number" name="num" min="0">
             <button type="submit">Thanh toán</button>
         </form>
     </div>
