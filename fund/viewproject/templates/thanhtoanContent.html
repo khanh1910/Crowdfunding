@@ -1,0 +1,24 @@
+{% extends 'baseThanhToan.html' %}
+{% block title %}Xác nhận đơn hàng{% endblock %}
+{% block contents %}
+<h1 class="xn">XÁC NHẬN GÓP VỐN</h1>
+<div class="noi_dung">
+    <form action="" method="post"></form>
+    {% csrf_token %}
+    
+    <p>Hãy nhập số sản phẩm bạn muốn mua (để góp vốn) bên dưới : </p>
+    <input type="number" name="num" min="0">
+    <p>Đơn giá sản phẩm: {{p.Price}}</p>
+    <p>Bạn muốn thanh toán bằng hình thức nào ?</p>
+    <div>
+        <input type="radio" name="choice">
+        <span>Thanh toán bằng điểm Funding (π) </span>
+        <span>(Bạn đang có {{user.Money}} điểm)</span>
+    </div>
+    <div>
+        <input type="radio" name="choice">
+        <span>Thanh toán bằng Thẻ Ngân Hàng </span>
+    </div>
+    <button type="submit">XÁC NHẬN GÓP VỐN</button>
+</div>
+{% endblock %}

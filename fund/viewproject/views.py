@@ -8,6 +8,15 @@ def haha(request,Project_id):
     user=User.objects.get(pk=3)
     return render(request, 'Projectviews.html',{"p":project,"u":user})
 
+
+def e(request,Project_id):
+    p=Project.objects.get(pk=Project_id)
+    context={
+        "p":p,
+    }
+    return render(request,"thanhtoanContent.html",context)
+
+
 def fund(request):
     user=request.user
     Project_id=1
