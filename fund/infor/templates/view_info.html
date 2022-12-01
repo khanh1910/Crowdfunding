@@ -3,11 +3,42 @@
 {% block contents %}
 	<h1 class="cd">Thông tin người dùng</h1>
 	<div class="fund_info">
-		<div class="fund_money"></div>
-		<div class="fund_project"></div>
+		<div class="fund_money">
+			<div class="name_tag">
+				Số tiền đã góp
+			</div>
+			{{s}} đ
+		</div>
+		<div class="avatar">
+			<img src="{{u.User_Image}}" alt="" style="width: 200px; height: 200px; border-radius: 50px;">
+			<div class="user_name">{{u.username}}</div>
+			
+		</div>
+		<div class="fund_project">
+			<div class="name_tag">
+				Số dự án đã góp
+			</div>
+			{{pc}}
+		</div>
 	</div>
 	<div class="box2">
-		<div class="my_project"></div>
+		<div class="my_project">
+			<div class="project_count">
+				<div class="in1">
+					<div class="tt">Số dự án</div>
+					<div class="ct"> {{pc3}}</div>
+				</div>
+				<div class="in2">
+					<div class="tt">Dự án thành công</div>
+					<div class="ct"></div>
+				</div>
+				<div class="in3">
+					<div class="tt">Số tiền nhận</div>
+					<div class="ct"></div>
+				</div>
+			</div>
+			<div class="project_sum"></div>
+		</div>
 		<div class="user_info"></div>
 	</div>
 {% endblock %}
