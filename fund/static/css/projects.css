@@ -56,16 +56,17 @@ a{
     font-family: 'Fira Sans', sans-serif;
 }
 .success-project {
-    display: flex;
+    float: left;
 }
 .success-project .item{
     border:#bbbfc2 solid 1px ;
     width: 25%;
     border-radius: 6px;
+    margin: 0 20px;
 }
 .success-project .item img{
     width: 100%;
-    height: 200px;
+    height: auto;
 }
 .success-project .item-content{
     width: 300px;
@@ -74,6 +75,7 @@ a{
 }
 .success-project .item-content .item-detail{
     text-align: center;
+    min-height: 100px;
 }
 .success-project .item-content .item-detail .item-name{
     color: #000;
@@ -84,12 +86,12 @@ a{
 .success-project .item-content .item-detail .describe{
     margin-top: 10px;
     line-height: 25px;
-    border-bottom: #bbbfc2 solid 1px;
-    padding-bottom: 10px;
 }
 .success-project .item-content .progress{
     margin-top: 10px;
     padding-left: 10px;
+    border-top: #bbbfc2 solid 1px;
+    padding-top: 15px;
 }
 .success-project .item-content .progress progress{
     margin: 10px 0;
