@@ -296,3 +296,12 @@ a{
 #popup #framep .cancel_btn{
 	text-align: right;
 }
+
+.icon{
+	background-color: transparent;
+	display: flex;
+}
+
+.icon image{
+	background-color: transparent;
+}
