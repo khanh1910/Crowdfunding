@@ -10,7 +10,7 @@
 			{{s}} đ
 		</div>
 		<div class="avatar">
-			<img src="{{u.User_Image}}" alt="" style="width: 200px; height: 200px; border-radius: 50px;">
+			<img src="{{u.User_Image}}" alt="" style="width: 200px; height: 200px; border-radius: 100px;">
 			<div class="user_name">{{u.username}}</div>
 			
 		</div>
@@ -23,22 +23,35 @@
 	</div>
 	<div class="box2">
 		<div class="my_project">
-			<div class="project_count">
+			<div class="project">
 				<div class="in1">
 					<div class="tt">Số dự án</div>
 					<div class="ct"> {{pc3}}</div>
 				</div>
 				<div class="in2">
 					<div class="tt">Dự án thành công</div>
-					<div class="ct"></div>
+					<div class="ct">{{pc4}}</div>
 				</div>
 				<div class="in3">
 					<div class="tt">Số tiền nhận</div>
-					<div class="ct"></div>
+					<div class="ct">{{pc5}}đ</div>
 				</div>
 			</div>
-			<div class="project_sum"></div>
+			<div class="balance">
+				<div class="balance_tt">Số dư :</div>
+				<div class="balance_value">{{pc6}} đ</div>
+			</div>
 		</div>
-		<div class="user_info"></div>
+		<div class="user_info">
+			<h6>Thông tin liên hệ</h6>
+			<ul class="list_info">
+				<li>Họ tên: {{pc7}}</li>
+				<hr>
+				<li>Email: {{pc8}}</li>
+				<hr>
+				<li>Số điện thoại: {{pc9}}</li>
+				<hr>
+			</ul>
+		</div>
 	</div>
 {% endblock %}
