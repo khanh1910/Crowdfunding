@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-	 overflow: hidden;
 }
 body{
     font-family: 'Fira Sans', sans-serif;
@@ -138,7 +137,6 @@ a{
 	margin: 39px auto;
 	background-color: transparent;
 	border-radius: 20px;
-	overflow: visible;
 }
 
 .user_name{
@@ -161,6 +159,7 @@ a{
 	border-radius: 15px;
 	display: flex;
 	box-shadow: 10px 4px 30px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
 }
 
 .project {
@@ -217,6 +216,7 @@ a{
 	margin-left: 20px;
 	width: 25%;
 	font-size: 30px;
+	overflow: hidden;
 }
 
 .balance_value{
@@ -257,4 +257,42 @@ a{
 .list_info li{
 	margin: 10px auto;
 	font-size: 18px;
+}
+
+.add_money{
+	background-color: transparent;
+}
+
+.add_money #conect_bank{
+	background-color: transparent;
+	border: 0;
+}
+
+
+#popup{
+	width: 100%;
+	height: 100%;
+	background-color: #383737ab;
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	/* transform: translate(0, -808px); */
+	transition: 0.2s;
+}
+
+#popup #framep{
+	margin: 230px auto;
+	background-color: white;
+	width: 390px;
+	height: 300px;
+}
+
+#popup #framep .cancel_btn, #popup #framep .cancel_btn button{
+	background-color: transparent;
+}
+
+#popup #framep .cancel_btn{
+	text-align: right;
 }
