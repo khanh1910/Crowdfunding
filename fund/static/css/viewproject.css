@@ -6,7 +6,7 @@
 }
 body{
     font-family: 'Fira Sans', sans-serif;
-    background-color: #dfe6e9;
+    background-color: #bdd8f3;
 }
 .contain{
     width: 100%;
@@ -66,9 +66,10 @@ a{
     margin: 100px auto;
     display: flex;
     padding: 20px;
-    background-color: #bbd4ed;
+    background-color: #89c0f8;
     border-radius: 7px;
     border: solid 2px #b0b2b4;
+    box-shadow: 1px 5px 10px #044b81;
 }
 .contenttop .left img{
     width: 550px;
@@ -86,11 +87,13 @@ a{
     display: block;
     margin: 20px 0px ;
 }
-
+.contenttop .right .cate{
+    margin-top: 10px;
+}
 .contenttop .right .project_data{
     display: flex;
     list-style: none;
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 120%;
 }
 .contenttop .right ul li{
@@ -122,40 +125,41 @@ a{
     padding: 5px 10px;
     border-radius: 3px;
     border: solid 2px #054678;
-    background-color: rgb(148, 175, 218);
+    background-color: rgb(67, 121, 237);
     color: #08044a;
     cursor: pointer;
 }
 .contenttop .right button:hover{
-    background-color: #2e86de;
+    background-color: #1566b6;
 }
 .contentbelow{
     display: flex;
 }
 .project_content{
-    width: 60%;
-    margin-left: 30px;
+    margin: 0 30px;
+    justify-items: center;
+}
+.project_content .h4_ndct{
+    text-decoration:underline;
 }
 .project_content h2{
     width: fit-content;
     margin: 0 auto;
     margin-top : 30px;
     font-size: 220%;
+    text-shadow: 1px 2px #3f73a7;
 }
 .project_content .p_content{
     margin: 20px 0;
+}
+.project_content .img_content{
+    margin-top: 20px;
+    width: 700px;
+    height: 400px;
+    border-radius: 5px;
 }
 hr{
     width: 90%;
     margin: 0 auto;
     margin-bottom: 30px;
-}
-.fund{
-    border: solid 1px rgb(126, 124, 124);
-    border-radius: 3px;
-    background-color: #1a6fca;
-    padding: 10px;
-    width: 30%;
-    margin-left: 20px;
-    height: 300px;
 }

@@ -55,40 +55,49 @@ a{
     color: #0984e3;
     font-family: 'Fira Sans', sans-serif;
 }
-.xn{
-    width: fit-content;
-    margin: 0 auto;
-    margin-bottom: 30px;
+.success-project {
+    display: flex;
 }
-.noi_dung{
-    padding: 40px;
-    margin: 0 0 20px 30px;
-    border-radius: 10px;
-    border: 3.5px solid #052e4e;
-    background-color:#74b9ff ;
-    width: 65%;
+.success-project .item{
+    border:#bbbfc2 solid 1px ;
+    width: 25%;
+    border-radius: 6px;
 }
-.noi_dung input{
-    font-size: 130%;
-    line-height: 30px;
-    margin-bottom: 20px;
-    border-radius: 2px;
-    border: 1.5px solid #0768b3;
+.success-project .item img{
+    width: 100%;
+    height: 200px;
+}
+.success-project .item-content{
+    width: 300px;
     
+    margin-top: 10px;
 }
-.noi_dung p{
-    margin-bottom: 20px;
-    font-size: 150%;
+.success-project .item-content .item-detail{
+    text-align: center;
 }
-.noi_dung button{
-    padding: 5px 10px;
+.success-project .item-content .item-detail .item-name{
+    color: #000;
+}
+.success-project .item-content .item-detail .item-name:hover{
+    color: rgb(53, 82, 172);
+}
+.success-project .item-content .item-detail .describe{
+    margin-top: 10px;
+    line-height: 25px;
+    border-bottom: #bbbfc2 solid 1px;
+    padding-bottom: 10px;
+}
+.success-project .item-content .progress{
+    margin-top: 10px;
+    padding-left: 10px;
+}
+.success-project .item-content .progress progress{
+    margin: 10px 0;
     border-radius: 3px;
-    border: solid 2px #052e4e;
-    font-size: 1;
-    color: #fff;
-    background-color: #1685da;
-    cursor: pointer;
+    height: 10px;
 }
-.noi_dung button:hover{
-    background-color: #0768b3;
+.success-project .item-content .progress .date{
+    margin-top: 20px;
+    border-top: #bbbfc2 solid 1px;
+    padding: 10px 0;
 }

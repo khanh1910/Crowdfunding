@@ -5,9 +5,17 @@ import os
 
 class Project(models.Model):
     Title=models.CharField(max_length=50)
-    ShortDescribe=models.TextField(default='',max_length=100)
-    Content=models.TextField(default='')
+    ShortDescribe=models.TextField(default='',max_length=70)
+    Content=models.TextField(default='',max_length=40)
     Owner=models.ForeignKey(User,on_delete=models.CASCADE)
+    Category_Choices=[
+        ('CN','Công nghệ'),
+        ('Dịch Vụ','Dịch vụ'),
+        ('DL','Du lịch'),
+        ('NN','Nông nghiệp'),
+        ('GD','Giáo dục'),
+    ]
+    Category=models.CharField(default='',choices=Category_Choices,max_length=20)
     Image=models.ImageField(null=True)
     Image_Content=models.ImageField(null=True,blank=True)
     GoalFund=models.IntegerField(default=0)
@@ -19,5 +27,5 @@ class Project(models.Model):
 
 class FundProject(models.Model):
     Project_Funder=models.ForeignKey(User,on_delete=models.CASCADE)
-    Funded_Project=models.ForeignKey(Project,on_delete=models.CASCADE)
+    Funded_Project=models.ForeignKey(Project,on_delete=models.CASCADE,default=0)
     Funded_Money=models.IntegerField(default=0)

@@ -19,10 +19,10 @@
                 <div class="header-top">
                     <a href="" id="logo">π/2</a>
                     <ul>
-                        <li><a href="">Về chúng tôi</a></li>
-                        <li><a href="">Tin tức</a></li>
-                        <li><a href="">Dự án</a></li>
-                        <li><a href="">Các dự án thành công</a></li>
+                        <li><a href="/aboutus">Về chúng tôi</a></li>
+                        <li><a href="/news">Tin tức</a></li>
+                        <li><a href="/projects">Dự án</a></li>
+                        <li><a href="/successproject">Các dự án thành công</a></li>
                         {% if user.username %}
                             <li style='margin-right: 2px; text-decoration: none'> Xin chào <a href="">{{user.first_name}} {{user.last_name}}</a></li>| 
                             <li style='margin-left: 2px'><a href="{% url 'logout' %}">Đăng xuất</a></li>

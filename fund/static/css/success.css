@@ -55,40 +55,14 @@ a{
     color: #0984e3;
     font-family: 'Fira Sans', sans-serif;
 }
-.xn{
-    width: fit-content;
-    margin: 0 auto;
-    margin-bottom: 30px;
-}
-.noi_dung{
-    padding: 40px;
-    margin: 0 0 20px 30px;
-    border-radius: 10px;
-    border: 3.5px solid #052e4e;
-    background-color:#74b9ff ;
-    width: 65%;
-}
-.noi_dung input{
-    font-size: 130%;
-    line-height: 30px;
-    margin-bottom: 20px;
-    border-radius: 2px;
-    border: 1.5px solid #0768b3;
-    
-}
-.noi_dung p{
-    margin-bottom: 20px;
-    font-size: 150%;
-}
-.noi_dung button{
-    padding: 5px 10px;
+.success{
     border-radius: 3px;
-    border: solid 2px #052e4e;
-    font-size: 1;
-    color: #fff;
-    background-color: #1685da;
-    cursor: pointer;
+    border: solid 3px #03410c;
+    padding: 10px 20px;
+    margin-left: 20px;
+    background-color: #55efc4;
+    width: 400px;
 }
-.noi_dung button:hover{
-    background-color: #0768b3;
+.success h2{
+    width: fit-content;
 }

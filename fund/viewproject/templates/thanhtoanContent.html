@@ -1,24 +1,33 @@
 {% extends 'baseThanhToan.html' %}
-{% block title %}Xác nhận đơn hàng{% endblock %}
+{% block title %}Xác Nhận Góp Vốn{% endblock %}
 {% block contents %}
 <h1 class="xn">XÁC NHẬN GÓP VỐN</h1>
 <div class="noi_dung">
-    <form action="" method="post"></form>
-    {% csrf_token %}
+    <form action="{% url 'XN' p.id %}" method="post">
+        {% csrf_token %}
     
     <p>Hãy nhập số sản phẩm bạn muốn mua (để góp vốn) bên dưới : </p>
-    <input type="number" name="num" min="0">
-    <p>Đơn giá sản phẩm: {{p.Price}}</p>
+    <input type="number" name="num" min="0" placeholder="Nhập số sản phẩm">
+    <p>Sản phẩm: <i><b>{{p.Title}}</b></i></p>
+    <p>Đơn giá sản phẩm: <i><b>{{p.Price}}</b></i></p>
     <p>Bạn muốn thanh toán bằng hình thức nào ?</p>
     <div>
-        <input type="radio" name="choice">
+        <input type="radio" value="1" name="choice">
         <span>Thanh toán bằng điểm Funding (π) </span>
-        <span>(Bạn đang có {{user.Money}} điểm)</span>
+        <span>(Bạn đang có <i><b>{{user.Money}}</b></i> điểm)</span>
     </div>
     <div>
-        <input type="radio" name="choice">
+        <input type="radio" value="2" name="choice">
         <span>Thanh toán bằng Thẻ Ngân Hàng </span>
     </div>
     <button type="submit">XÁC NHẬN GÓP VỐN</button>
+    </form>
 </div>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
 {% endblock %}
