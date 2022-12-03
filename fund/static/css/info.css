@@ -461,6 +461,7 @@ a{
 	left: 0;
 	opacity: 0;
 	pointer-events: none;
+	transition: 0.2s;
 }
 
 #box3 .header{
@@ -477,6 +478,8 @@ a{
 	height: 25px;
 	border-radius: 100px;
 	background-color: red;
+	color: white;
+	border: 0;
 }
 #box3 .header #close_box3:hover{
 	background-color:#0984e3;
@@ -533,6 +536,7 @@ a{
 	left: 0;
 	opacity: 0;
 	pointer-events: none;
+	transition: 0.2s;
 }
 #box_addmoney *{
 	background-color: transparent;
@@ -541,7 +545,7 @@ a{
 	width: 50%;
 	height: 320px;
 	margin: 150px auto;
-	background-color: white;
+	background-color:aliceblue;
 	padding: 0 20px;
 	text-align: center;
 	border-radius: 20px;
@@ -570,9 +574,12 @@ a{
 }
 
 #box_addmoney input{
+	background-color: white;
 	width: 80%;
 	height: 35px;
 	margin: 15px;
+	border: 0;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 #box_addmoney .boxct p{
@@ -581,4 +588,5 @@ a{
 
 #box_addmoney .submit_money{
 	width: 150px;
+	border: 1px solid black;
 }

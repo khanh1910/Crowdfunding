@@ -31,8 +31,8 @@ document.getElementById("change_pass").onclick = function(){
 }
 
 document.getElementById("close_box3").onclick = function(){
-	document.getElementById("box_addmoney").style.opacity = "0";
-	document.getElementById("box_addmoney").style.pointerEvents = "none";
+	document.getElementById("box3").style.opacity = "0";
+	document.getElementById("box3").style.pointerEvents = "none";
 }
 
 document.getElementById("add_money").onclick = function(){
