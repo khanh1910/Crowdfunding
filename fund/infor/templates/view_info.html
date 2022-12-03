@@ -97,5 +97,15 @@
 			<button type="button" id="close_polices">ok</button>
 		</div>
 	</ol></div>
+<div id="box3">
+
+	<form action="{% url 'updatepass' pc11 %}" method="post" class="changepassbox">
+		{% csrf_token %}
+		<input type="text" name="check_pass" id="check_pass">
+		<input type="text" name="new_pass" id="new_pass">
+		<input type="text" name="checknew_pass" id="checknew_pass">
+		<input type="submit" value="send">
+	</form>
+</div>
 	<script src="{% static 'js/info.js' %}"></script>
 {% endblock %}

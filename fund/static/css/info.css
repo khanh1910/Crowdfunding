@@ -406,3 +406,28 @@ a{
 #close_polices:hover{
 	background-color: azure;
 }
+
+#box3{
+	width: 100%;
+	height: 100%;
+	background-color: #303030bb;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.changepassbox{
+	margin: 50px auto;
+	padding-top: 20px;
+	text-align: center;
+	width: 400px;
+	height: 500px;
+	background-color: white;
+	border-radius: 20px;
+}
+
+.changepassbox input{
+	margin: 20px auto;
+	width: 90%;
+	height: 45px;
+	background-color: white;
+}
