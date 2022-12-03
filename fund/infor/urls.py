@@ -6,4 +6,5 @@ urlpatterns = [
    path('test/', views.update, name='t1'),
    path('User_<int:User_id>/', views.t1, name='t1'),
    path('User_<int:User_id>/updatepass', views.update, name='updatepass'),
+   path('User_<int:User_id>/addmoney', views.money_exc, name='moneyadd'),
 ]

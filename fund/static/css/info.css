@@ -261,12 +261,48 @@ a{
 }
 
 .conectbt{
+	width: 100%;
 	background-color: transparent;
 	text-align: center;
-	margin-top: 50px
+	align-items: center;
+	margin: 50px auto;
+	display: flex;
+}
+
+.conectbt div{
+	margin: 0 auto;
+	background-color: transparent;
+}
+
+.conectbt div div{
+	font-size: 9px;
+}
+.conectbt button{
+	margin: 5px auto;
+}
+
+.conectbt #change_pass{
+	margin: auto 20px;
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	border-radius: 10px;
+	border: 1px solid grey;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.conectbt #add_money{
+	margin: auto 20px;
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	border-radius: 10px;
+	border: 1px solid grey;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .conectbt #conect_bank{
+	margin: auto 20px;
 	width: 50px;
 	height: 50px;
 	background-color: transparent;
@@ -276,6 +312,14 @@ a{
 }
 
 .conectbt #conect_bank:hover{
+	box-shadow: 0 4px 30px rgba(0, 98, 255, 0.3);
+	border: 2px solid grey;
+}
+.conectbt #change_pass:hover{
+	box-shadow: 0 4px 30px rgba(0, 98, 255, 0.3);
+	border: 2px solid grey;
+}
+.conectbt #add_money:hover{
 	box-shadow: 0 4px 30px rgba(0, 98, 255, 0.3);
 	border: 2px solid grey;
 }
@@ -381,6 +425,7 @@ a{
 	padding-left: 30px;
 	line-height: 1.6;
 	border-radius: 20px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 .polices_tt{
 	background-color: transparent;
@@ -414,15 +459,46 @@ a{
 	position: fixed;
 	top: 0;
 	left: 0;
+	opacity: 0;
+	pointer-events: none;
 }
+
+#box3 .header{
+	margin: 0 20px 30px auto;
+	padding:0 20px 0 0;
+	width: 100%;
+	height: 20px;
+	background-color: transparent;
+	text-align: right;
+}
+
+#box3 .header #close_box3{
+	width: 25px;
+	height: 25px;
+	border-radius: 100px;
+	background-color: red;
+}
+#box3 .header #close_box3:hover{
+	background-color:#0984e3;
+}
+
 .changepassbox{
 	margin: 50px auto;
 	padding-top: 20px;
 	text-align: center;
 	width: 400px;
 	height: 500px;
-	background-color: white;
+	background-color:aliceblue;
 	border-radius: 20px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.changepassbox p{
+	padding: auto 10px;
+	margin-bottom: -18px;
+	background-color: transparent;
+	text-align: left;
+	color: #4e4e4e;
 }
 
 .changepassbox input{
@@ -430,4 +506,79 @@ a{
 	width: 90%;
 	height: 45px;
 	background-color: white;
+	border: 0;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	font-size: 18px;
+}
+
+.messages, .messages *{
+	width: 100%;
+	background-color: rgb(251, 255, 0);
+	padding: 5px;
+	font-size: 25px;
+	color: rgb(0, 0, 0);
+}
+.messages{
+	margin-top: -20px;
+	height: 50px;
+	text-align: center
+}
+
+#box_addmoney{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: #323232a1;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+#box_addmoney *{
+	background-color: transparent;
+}
+#box_addmoney .boxct{
+	width: 50%;
+	height: 320px;
+	margin: 150px auto;
+	background-color: white;
+	padding: 0 20px;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#box_addmoney .header{
+	height: 20px;
+	text-align: right;
+	margin-bottom: 5px;
+}
+
+#box_addmoney .header button{
+	width: 25px;
+	height: 25px;
+	border-radius: 100px;
+	margin-right: 10px;
+	background-color: red;
+	color: white;
+	border: 0;
+	
+}
+
+#box_addmoney .header button:hover{
+	background-color: #0984e3;
+}
+
+#box_addmoney input{
+	width: 80%;
+	height: 35px;
+	margin: 15px;
+}
+
+#box_addmoney .boxct p{
+	text-align: left;
+}
+
+#box_addmoney .submit_money{
+	width: 150px;
 }

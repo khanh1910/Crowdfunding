@@ -1,5 +1,6 @@
 
 {% extends 'header.html' %}
+
 {% block title %}Thông tin người dùng{% endblock %}
 {% block contents %}
 {% load static %}
@@ -8,7 +9,18 @@
 			background-image: url("{% static 'images/conect_icon.jpg' %}");
 			background-size: cover;
 		}
+
+		#change_pass{
+			background-image: url("{% static 'images/changepass_icon.png' %}");
+			background-size:cover;
+		}
+
+		#add_money{
+			background-image: url("{% static 'images/addmoney_icon.jpg' %}");
+			background-size: cover;
+		}
 	</style>
+	
 	<h1 class="cd">Thông tin người dùng</h1>
 	<div class="fund_info">
 		<div class="fund_money">
@@ -61,8 +73,18 @@
 				<hr>
 			</ul>
 			<div class="conectbt">
-				<button type="button" id="conect_bank" ></button>
-				<div class="conect_ct">Thêm kết nối</div>
+				<div>
+					<button type="button" id="conect_bank" ></button>
+					<div class="conect_ct">Thêm kết nối</div>
+				</div>
+				<div>
+					<button type="button" id="change_pass" ></button>
+					<div class="conect_ct">Đổi mật khẩu</div>
+				</div>
+				<div>
+					<button type="button" id="add_money" ></button>
+					<div class="conect_ct">Nạp tiền</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -98,14 +120,45 @@
 		</div>
 	</ol></div>
 <div id="box3">
-
+	
 	<form action="{% url 'updatepass' pc11 %}" method="post" class="changepassbox">
 		{% csrf_token %}
-		<input type="text" name="check_pass" id="check_pass">
-		<input type="text" name="new_pass" id="new_pass">
-		<input type="text" name="checknew_pass" id="checknew_pass">
-		<input type="submit" value="send">
+		<div class="header">
+			<button type="button" id="close_box3">X</button>
+		</div>
+		<div class="tt" style="font-size: 18px; color:rgb(80, 80, 80)">Thay đổi mật khẩu</div>
+		<p>Nhập mật khẩu</p>
+		<input type="password" name="check_pass" id="check_pass">
+		<p>Nhập mật khẩu mới</p>
+		<input type="password" name="new_pass" id="new_pass">
+		<p>Nhập lại mật khẩu</p>
+		<input type="password" name="checknew_pass" id="checknew_pass">
+		<input type="submit" value="Xác nhận">
 	</form>
 </div>
+
+{% if messages %}
+	<ul class="messages">
+		 {% for message in messages %}
+		 <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+		 {% endfor %}
+	</ul>
+	{% endif %}
+
+<div id="box_addmoney">
+	<form action="{% url 'moneyadd' pc11 %}" method="post" class="boxct">
+		{% csrf_token %}
+		<div class="header">
+			<button type="button" id="close_boxaddmoney">X</button>
+		</div>
+		<div class="tt" style="font-size: 18px; color:rgb(80, 80, 80)">Nạp tiền</div>
+		<p>Nhập mật khẩu</p>
+		<input type="password" name="check_pass" id="check_pass">
+		<p>Nhập số tiền cần nạp</p>
+		<input type="number" name="money_ex" id="new_pass">
+		<input type="submit" value="Xác nhận" class="submit_money">
+	</form>
+</div>
+
 	<script src="{% static 'js/info.js' %}"></script>
 {% endblock %}

@@ -5,6 +5,8 @@ from user.models import User
 from viewproject.models import FundProject, Project
 from django.db.models import Count
 from django.contrib.auth import authenticate
+from django.contrib import messages
+from django.http import HttpResponseRedirect
 
 
 # Create your views here.
@@ -75,12 +77,34 @@ def update(request, User_id):
     data = request.POST["check_pass"]
     newpass = request.POST["new_pass"]
     checknewpass = request.POST["checknew_pass"]
-    if user.check_password(data):
+    check = user.check_password(data)
+    error = False
+    if check:
         if newpass == checknewpass:
             user.set_password(newpass)
             user.save()
-            return HttpResponse(data)
+            messages.info(request, "Thay đổi mật khẩu thành công!")
+            return HttpResponseRedirect("/login")
         else:
-            ...
+            messages.info(request, "Mật khẩu không khớp!")
+            return HttpResponseRedirect("/infor/User_" + str(curent_user.id))
     else:
-        ...
+        messages.info(request, "Mật khẩu sai!")
+        return HttpResponseRedirect("/infor/User_" + str(curent_user.id))
+
+
+def money_exc(request, User_id):
+    curent_user = request.user
+    u = User.objects.get(pk=curent_user.id)
+    user = User.objects.get(username=u.username)
+    data = request.POST["check_pass"]
+    money_ex = request.POST["money_ex"]
+    check = user.check_password(data)
+    if check:
+        user.User_Money += int(money_ex)
+        user.save()
+        messages.info(request, "Nạp tiền thành công")
+        return HttpResponseRedirect("/infor/User_" + str(curent_user.id))
+    else:
+        messages.info(request, "Mật khẩu sai!")
+        return HttpResponseRedirect("/infor/User_" + str(curent_user.id))
