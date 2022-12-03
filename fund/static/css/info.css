@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lato&display=swap');
+
 *{
 	background-color:#0984e3;
     margin: 0;
@@ -259,15 +260,30 @@ a{
 	font-size: 18px;
 }
 
-.add_money{
+.conectbt{
 	background-color: transparent;
+	text-align: center;
+	margin-top: 50px
 }
 
-.add_money #conect_bank{
+.conectbt #conect_bank{
+	width: 50px;
+	height: 50px;
 	background-color: transparent;
-	border: 0;
+	border-radius: 10px;
+	border: 1px solid grey;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
+.conectbt #conect_bank:hover{
+	box-shadow: 0 4px 30px rgba(0, 98, 255, 0.3);
+	border: 2px solid grey;
+}
+
+.conect_ct{
+	background-color: transparent;
+	color: #6b6b6b;
+}
 
 #popup{
 	width: 100%;
@@ -286,14 +302,34 @@ a{
 	margin: 230px auto;
 	background-color: white;
 	width: 390px;
-	height: 300px;
+	height: 200px;
+	padding: 3px;
+	border-radius: 20px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 #popup #framep .cancel_btn, #popup #framep .cancel_btn button{
 	background-color: transparent;
 }
 
+#popup #framep .cancel_btn button{
+	width: 20px;
+	height: 20px;
+	text-align: right;
+	border: 0;
+	border-radius: 30px;
+	background-color: red;
+	text-align: center;
+	color: white;
+}
+
+#popup #framep .cancel_btn button:hover{
+	background-color: #0984e3;
+}
+
 #popup #framep .cancel_btn{
+	margin-top: 10px;
+	margin-right: 10px;
 	text-align: right;
 }
 
@@ -302,6 +338,71 @@ a{
 	display: flex;
 }
 
-.icon image{
+.icon img{
 	background-color: transparent;
+	width: 50px;
+	height: 50px;
+	margin: 20px auto;
+}
+
+#framep .tt{
+	text-align: center;
+	margin: 0;
+}
+
+#polices{
+	margin-top: 10px;
+	text-align: center;
+	background-color: transparent;
+}
+
+#polices:hover{
+	color: #0984e3;
+}
+
+#frame_polices{
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+#frame_polices{
+	width: 100%;
+	height: 100%;
+	background-color: #383737ab;
+	opacity: 0;
+	pointer-events: none;
+}
+.polices_content{
+	width: 75%;
+	background-color: white;
+	text-align: justify;
+	margin: 100px auto;
+	padding: 20px;
+	padding-left: 30px;
+	line-height: 1.6;
+	border-radius: 20px;
+}
+.polices_tt{
+	background-color: transparent;
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.polices_content li{
+	background-color: white;
+}
+.clplc{
+	background-color: transparent;
+	text-align: right;
+}
+
+#close_polices{
+	margin-top: 10px;
+	background-color: rgb(0, 200, 156);
+	width: 50px;
+	height: 30px;
+}
+
+#close_polices:hover{
+	background-color: azure;
 }
