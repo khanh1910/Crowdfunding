@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <script src="https://kit.fontawesome.com/027f8c7675.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href = "{% static 'css/projects.css' %}" type="text/css">
+    <link rel="icon" href="/static/images/funding.png">
+</head>
+<body>
+    <div class="contain">
+        <div class="header">
+            <div class="header-top">
+                <a href="/" id="logo">π/2</a>
+                <ul>
+                    <li><a href="/aboutus">Về chúng tôi</a></li>
+                    <li><a href="/news">Tin tức</a></li>
+                    <li><a href="/projects">Dự án</a></li>
+                    <li><a href="/successproject">Các dự án thành công</a></li>
+                    {% if user.username %}
+                        <li style='margin-right: 2px; text-decoration: none'> Xin chào <a href="">{{user.first_name}} {{user.last_name}}</a></li>| 
+                        <li style='margin-left: 2px'><a href="{% url 'logout' %}">Đăng xuất</a></li>
+                    {% else %}
+                        <li style='margin-right: 2px'><a href="{% url 'register' %}">Đăng ký</a> </li>|
+                        <li style='margin-left: 2px'><a href="{% url 'login' %}">Đăng nhập</a> </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+        <span class="title">DỰ ÁN</span>
+        <div class="success-project">
+            {% for item in Ps %}
+            <div class="item">
+                <img src="{{ item.Image.url }}" alt="">
+                <div class="item-content">
+                    <div class="item-detail">
+                        <h3 ><a class="item-name" href="/projects/Project_{{item.id}}">{{item.Title}}</a></h3>
+                        <p class="describe">{{item.ShortDescribe}}</p>
+                    </div>
+                    <div class="progress">
+                        <div class="raised">
+                            <span><b>{{item.GoalFund}}$</b> Goal</span>
+                        </div>
+                        <progress max="{{item.GoalFund}}" value="{{item.RecentFund}}">khoi</progress>
+                        <div class="raised">
+                            <span><b>{{item.RecentFund}}$</b> Funded </span>
+                            <span>(<i>153.40%</i>)</span>
+                            <p class="date"><b>{{item.DateEnd}}</b> End Project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>    
+</body>
+</html>

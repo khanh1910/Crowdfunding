@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký gọi vốn </title>
+    <link rel="stylesheet" href="{% static 'css/campaign.css' %}" type="text/css">
+
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='woocommerce-general-css'
+        href='https://funding.vn/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=4.0.2' type='text/css'
+        media='all' />
+    <style id='woocommerce-inline-inline-css' type='text/css'>
+        .woocommerce form .form-row .required {
+            visibility: visible;
+        }
+    </style>
+    <link rel='stylesheet' id='neo-crowdfunding-css-front-css'
+        href='https://funding.vn/wp-content/plugins/wp-crowdfunding/assets/css/crowdfunding-front.css?ver=11.0.6'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='buttons-css' href='https://funding.vn/wp-includes/css/buttons.min.css?ver=5.3.13'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='dashicons-css' href='https://funding.vn/wp-includes/css/dashicons.min.css?ver=5.3.13'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='mediaelement-css'
+        href='https://funding.vn/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.13-9993131'
+        type='text/css' media='all' />
+
+    <link rel='stylesheet' id='wp-mediaelement-css'
+        href='https://funding.vn/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=5.3.13' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='media-views-css' href='https://funding.vn/wp-includes/css/media-views.min.css?ver=5.3.13'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='imgareaselect-css'
+        href='https://funding.vn/wp-includes/js/imgareaselect/imgareaselect.css?ver=0.9.8' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='wpneo_crowdfunding_style-css'
+        href='https://funding.vn/wp-content/themes/backer/wpneotemplate/woocommerce/basic/style.css?ver=11.0.6'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='wpneo-wallet-front-css-css'
+        href='https://funding.vn/wp-content/plugins/wp-crowdfunding/addons/wallet/assets/wpneo-crowdfunding-wallet.css?ver=1670059750'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='tm-google-font-css'
+        href='//fonts.googleapis.com/css?family=Inter%3A400%2C600%2C700%2C700%2C700%2C700%2C600&#038;ver=5.3.13'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='default-google-font-css'
+        href='//fonts.googleapis.com/css?family=Open+Sans%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C700%2C700i%2C800%2C800i&#038;ver=5.3.13'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='backer-font-css'
+        href='https://fonts.googleapis.com/css?family=Poppins%3A300%2C400%2C500%2C600%2C700&#038;subset=latin%2Clatin-ext'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='bootstrap.min-css'
+        href='https://funding.vn/wp-content/themes/backer/css/bootstrap.min.css?ver=all' type='text/css' media='all' />
+    <link rel='stylesheet' id='font-awesome.min-css'
+        href='https://funding.vn/wp-content/themes/backer/css/font-awesome.min.css?ver=all' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='magnific-popup-css'
+        href='https://funding.vn/wp-content/themes/backer/css/magnific-popup.css?ver=all' type='text/css' media='all' />
+    <link rel='stylesheet' id='backer-main-css' href='https://funding.vn/wp-content/themes/backer/css/main.css?ver=all'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='backer-responsive-css'
+        href='https://funding.vn/wp-content/themes/backer/css/responsive.css?ver=all' type='text/css' media='all' />
+    <link rel='stylesheet' id='backer-woocommerce-css'
+        href='https://funding.vn/wp-content/themes/backer/css/woocommerce.css?ver=all' type='text/css' media='all' />
+    <link rel='stylesheet' id='backer-style-css' href='https://funding.vn/wp-content/themes/backer/style.css?ver=5.3.13'
+        type='text/css' media='all' />
+    <style id='backer-style-inline-css' type='text/css'>
+        body {
+            font-size: 14px;
+            font-family: Inter;
+            font-weight: 400;
+            line-height: 24px;
+            color: #191919;
+        }
+
+
+        h1 {
+            font-size: 42px;
+            font-family: Inter;
+            font-weight: 700;
+            line-height: 42px;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-family: Inter;
+            font-weight: 600;
+            line-height: 42px;
+            color: #333;
+        }
+
+        h3 {
+            font-size: 26px;
+            font-family: Inter;
+            font-weight: 600;
+            line-height: 28px;
+            color: #333;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-family: Inter;
+            font-weight: 600;
+            line-height: 26px;
+            color: #333;
+        }
+
+        h5 {
+            font-size: 16px;
+            font-family: Inter;
+            font-weight: 600;
+            line-height: 24px;
+            color: #333;
+        }
+
+        .site-header {
+            background-color: #0F318F;
+            padding-top: 20px;
+            padding-bottom: 0px;
+        }
+
+        .subtitle-cover h2 {
+            font-size: 18px;
+            color: #404a51;
+        }
+
+        .breadcrumb>li+li:before,
+        .subtitle-cover .breadcrumb,
+        .subtitle-cover .breadcrumb>.active {
+            color: #000;
+        }
+
+        .subtitle-cover .breadcrumb a {
+            color: #000;
+        }
+
+        .subtitle-cover .breadcrumb a:hover {
+            color: #000;
+        }
+
+        .subtitle-cover {
+            padding: 40px 0 40px;
+            margin-bottom: 0px;
+        }
+
+        body {
+            background-color: #fff;
+        }
+
+        .btn.btn-backer,
+        input[type=submit],
+        input[type="button"].wpneo-image-upload,
+        input[type="button"].wpneo-image-upload-btn,
+        input[type="button"]#addreward,
+        .wpneo-edit-btn,
+        .wpneo-image-upload.float-right,
+        .wpneo-save-btn,
+        .wpneo-cancel-btn,
+        .dashboard-btn-link,
+        #wpneo_active_edit_form,
+        #addcampaignupdate,
+        .wpneo_donate_button,
+        .wpneo-profile-button,
+        .select_rewards_button,
+        .woocommerce-page #payment #place_order,
+        .btn.btn-white:hover,
+        .btn.btn-border-backer:hover,
+        .btn.btn-border-white:hover,
+        .woocommerce input.button,
+        input[type="submit"].wpneo-submit-campaign {
+            background-color: #0095cf;
+            border-color: #0095cf;
+            color: #fff !important;
+            border-radius: 4px;
+        }
+
+        .backer-login-register a.backer-dashboard {
+            background-color: #0095cf;
+        }
+
+        .btn.btn-backer:hover,
+        input[type=submit]:hover,
+        input[type="button"].wpneo-image-upload:hover,
+        input[type="button"].wpneo-image-upload-btn:hover,
+        input[type="button"]#addreward:hover,
+        .wpneo-edit-btn:hover,
+        .wpneo-image-upload.float-right:hover,
+        .wpneo-save-btn:hover,
+        .dashboard-btn-link:hover,
+        #wpneo_active_edit_form:hover,
+        #addcampaignupdate:hover,
+        .wpneo_donate_button:hover,
+        .wpneo-profile-button:hover,
+        .select_rewards_button:hover,
+        .woocommerce-page #payment #place_order:hover,
+        input[type="submit"].wpneo-submit-campaign:hover {
+            background-color: #0c70ce;
+            border-color: #0c70ce;
+            color: #fff !important;
+        }
+
+        .bottom {
+            background-color: #202020;
+            color: #ffffff;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    </style>
+
+</head>
+<body
+    class="page-template-default page page-id-7 logged-in theme-backer woocommerce-no-js fullwidth-bg elementor-default">
+
+    <div id="page" class="hfeed site fullwidth">
+        <header id="masthead" class="site-header header header-solid">
+            <div class="container-fluid">
+                <div class="header-top">
+                    <a href="" id="logo">π/2</a>
+                    <ul>
+                        <li><a href="">Về chúng tôi</a></li>
+                        <li><a href="">Tin tức</a></li>
+                        <li><a href="">Dự án</a></li>
+                        <li><a href="">Các dự án thành công</a></li>
+                        {% if user.username %}
+                        <li style='margin-right: 2px; text-decoration: none'> Xin chào {{user.first_name}}
+                            {{user.last_name}}</li>|
+                        <li style='margin-left: 2px'><a href="{% url 'logout' %}">Đăng xuất</a></li>
+                        {% else %}
+                        <li style='margin-right: 2px'><a href="{% url 'register' %}">Đăng ký</a> </li>|
+                        <li style='margin-left: 2px'><a href="{% url 'login' %}">Đăng nhập</a> </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section id="main">
+            <div class="subtitle-cover sub-title">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h2 class="page-leading">Đăng ký gọi vốn</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form method="POST" action="">
+                {% csrf_token %}
+                <div class="container">
+                    <div id="content" class="site-content" role="main">
+                        <div id="post-7" class="post-7 page type-page status-publish hentry">
+                            <div class="entry-content">
+                                <form type="post" action="" id="wpneofrontenddata">
+
+
+                                    <div class="wpneo-single">
+                                        <div class="wpneo-name">Tiêu đề</div>
+                                        <div class="wpneo-fields">
+                                            {{ form.Title }}
+                                            <small>Đặt tiêu đề của dự án </small>
+                                        </div>
+                                    </div>
+                                    <div class="wpneo-single">
+                                        <div class="wpneo-name">Nội dung</div>
+                                        <div class="wpneo-fields">
+                                            {{ form.Content }}
+                                            <small>Thêm nội dung của dự án </small>
+                                        </div>
+                                    </div>
+                                    <div class="wpneo-single">
+                                        <div class="wpneo-name">Mô tả ngắn gọn</div>
+                                        <div class="wpneo-fields">
+                                            {{ form.ShortDescribe }}
+                                            <small>Thêm mô tả ngắn gọn của dự án </small>
+                                        </div>
+                                    </div>
+
+                                    <div class="wpneo-single">
+                                        <div class="wpneo-name">Phân loại</div>
+                                        <div class="wpneo-fields"><select name="wpneo-form-category">
+                                                <option value="uncategorized">Chưa phân loại</option>
+                                                <option value="cong-nghe">Công nghệ</option>
+                                                <option value="dich-vu">Dịch vụ</option>
+                                                <option value="du-lich">Du lịch</option>
+                                                <option value="nong-nghiep">Nông nghiệp</option>
+                                                <option value="giao-duc">Giáo dục</option>
+                                            </select><small>Chọn phân loại dự án của bạn</small></div>
+                                    </div>
+                                    <div class="wpneo-single">
+                                        <div class="wpneo-name">Hình ảnh</div>
+                                        <div class="wpneo-fields"><input type="text" name="wpneo-form-image-url"
+                                                class="wpneo-upload wpneo-form-image-url" value=""><input type="hidden"
+                                                name="wpneo-form-image-id" class="wpneo-form-image-id" value=""><input
+                                                type="button" id="cc-image-upload-file-button"
+                                                class="wpneo-image-upload float-right" value="Tải hình ảnh"
+                                                data-url="{% url 'dashboard' %}" /><small>Tải lên hình ảnh dự án</small>
+                                        </div>
+                                    </div>
+                                    <div class="wpneo-single">
+                                        <div class="wpneo-name">Hình ảnh</div>
+                                        <div class="wpneo-fields"><input type="text" name="wpneo-form-image-url"
+                                                class="wpneo-upload wpneo-form-image-url" value=""><input type="hidden"
+                                                name="wpneo-form-image-id" class="wpneo-form-image-id" value=""><input
+                                                type="button" id="cc-image-upload-file-button"
+                                                class="wpneo-image-upload float-right" value="Tải hình ảnh"
+                                                data-url="{% url 'dashboard' %}" /><small>Tải lên hình ảnh dự án</small>
+                                        </div>
+                                    </div>
+                                    <div class="wpneo-single">
+                                        <div class="wpneo-name">Mục tiêu</div>
+                                        <div class="wpneo-fields">
+                                            {{ form.GoalFund }}
+                                            <small>Số tiền mục tiêu của dự án</small>
+                                        </div>
+                                        <div class="wpneo-single">
+                                            <div class="wpneo-name">Vị trí</div>
+                                            <div class="wpneo-fields">
+                                                {{ form.Location }}
+                                                <small>Thêm vị trí của dự án</small>
+                                            </div>
+                                        </div>
+                                        <div class="wpneo-single">
+                                            <div class="wpneo-name">Giá tiền</div>
+                                            <div class="wpneo-fields">
+                                                {{ form.Price }}
+                                                <small>Giá của sản phẩm</small>
+                                            </div>
+                                        </div>
+                                        <div class="wpneo-title"></div>
+                                        <div class="wpneo-text"></div>
+                                        <div class="wpneo-requirement-title"><input type="checkbox" value="agree"
+                                                name="wpneo_terms_agree"> Tôi đồng ý với các điều khoản</div>
+                                        <div class="wpneo-form-action"><input type="hidden" name="action"
+                                                value="addfrontenddata" />
+                                            <input type="submit" class="wpneo-submit-campaign" value="Gửi dự án">
+                                            <a href="{% url 'dashboard' %}" class="wpneo-cancel-campaign">Trở lại</a>
+                                        </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <div class="bottom footer-wrap">
+            <div class="container">
+            </div>
+        </div>
+</body>
+</html>

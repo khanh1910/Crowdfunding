@@ -1,19 +1,6 @@
 
 from django.contrib.auth.forms import UserCreationForm
-# from django.contrib.auth.models import User
 from django import forms
-# import re
-
-# class CreateUserForm(UserCreationForm):
-#     first_name = forms.CharField(
-#         error_messages={'invalid':'Tên không hợp lệ', 'required': 'Hãy nhập tên của bạn'})
-#     last_name = forms.CharField(
-#         error_messages={'invalid':'Họ không hợp lệ', 'required': 'Hãy nhập họ của bạn'})
-#     # email = forms.EmailField()
-#     class Meta:
-#         model = User
-#         fields = ['username', 'email', 'password1', 'password2', 'first_name', 'last_name']
-
 
 from django.contrib.auth import get_user_model
 

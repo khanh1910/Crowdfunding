@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lato&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #dfe6e9;
+}
+.contain{
+    width: 100%;
+    margin: 0 auto;
+}
+ul{
+    list-style: none;
+}
+.header{
+    padding-top: 20px;
+    height: 100px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+a{
+    text-decoration: none;
+}
+.header .header-top{
+    margin: 0 auto;
+    width: 85%;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 20px;
+    box-shadow: 1px 5px 10px #0768b3;
+    font-family: 'Lato', sans-serif;
+}
+.header .header-top ul{
+    display: flex;
+}
+.header .header-top ul li{
+    list-style: none;
+    margin: 0 20px;
+}
+.header .header-top ul li:hover{
+    text-decoration: underline;
+}
+.header .header-top #logo{
+    font-size: 40px;
+    font-weight:900;
+    display: block;
+    margin-left: 20px;
+    color: #0984e3;
+    font-family: 'Fira Sans', sans-serif;
+}
+.xn{
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.noi_dung{
+    padding: 40px;
+    margin: 0 0 20px 30px;
+    border-radius: 10px;
+    border: 3.5px solid #052e4e;
+    background-color:#74b9ff ;
+    width: 65%;
+}
+.noi_dung input{
+    font-size: 130%;
+    line-height: 30px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    border: 1.5px solid #0768b3;
+    
+}
+.noi_dung p{
+    margin-bottom: 20px;
+    font-size: 150%;
+}
+.noi_dung button{
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: solid 2px #052e4e;
+    font-size: 1;
+    color: #fff;
+    background-color: #1685da;
+    cursor: pointer;
+}
+.noi_dung button:hover{
+    background-color: #0768b3;
+}
