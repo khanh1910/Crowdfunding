@@ -7,28 +7,6 @@
     <title>Đăng ký gọi vốn </title>
     <link rel="stylesheet" href="{% static 'css/campaign.css' %}" type="text/css">
 
-    <style type="text/css">
-        img.wp-smiley,
-        img.emoji {
-            display: inline !important;
-            border: none !important;
-            box-shadow: none !important;
-            height: 1em !important;
-            width: 1em !important;
-            margin: 0 .07em !important;
-            vertical-align: -0.1em !important;
-            background: none !important;
-            padding: 0 !important;
-        }
-    </style>
-    <link rel='stylesheet' id='woocommerce-general-css'
-        href='https://funding.vn/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=4.0.2' type='text/css'
-        media='all' />
-    <style id='woocommerce-inline-inline-css' type='text/css'>
-        .woocommerce form .form-row .required {
-            visibility: visible;
-        }
-    </style>
     <link rel='stylesheet' id='neo-crowdfunding-css-front-css'
         href='https://funding.vn/wp-content/plugins/wp-crowdfunding/assets/css/crowdfunding-front.css?ver=11.0.6'
         type='text/css' media='all' />
@@ -85,47 +63,6 @@
             font-weight: 400;
             line-height: 24px;
             color: #191919;
-        }
-
-
-        h1 {
-            font-size: 42px;
-            font-family: Inter;
-            font-weight: 700;
-            line-height: 42px;
-            color: #333;
-        }
-
-        h2 {
-            font-size: 36px;
-            font-family: Inter;
-            font-weight: 600;
-            line-height: 42px;
-            color: #333;
-        }
-
-        h3 {
-            font-size: 26px;
-            font-family: Inter;
-            font-weight: 600;
-            line-height: 28px;
-            color: #333;
-        }
-
-        h4 {
-            font-size: 18px;
-            font-family: Inter;
-            font-weight: 600;
-            line-height: 26px;
-            color: #333;
-        }
-
-        h5 {
-            font-size: 16px;
-            font-family: Inter;
-            font-weight: 600;
-            line-height: 24px;
-            color: #333;
         }
 
         .site-header {
@@ -258,7 +195,7 @@
                     </div>
                 </div>
             </div>
-            <form method="POST" action="">
+            <form method="POST" action="" enctype ="multipart/form-data">
                 {% csrf_token %}
                 <div class="container">
                     <div id="content" class="site-content" role="main">
@@ -275,20 +212,24 @@
                                     <div class="wpneo-single">
                                         <div class="wpneo-name">Nội dung</div>
                                         <div class="wpneo-fields">
-                                            <input type="text" Required name="Content" class="form-control">
+                                            <textarea class="wp-editor-area" style="height: 200px" autocomplete="off"
+                                            cols="40" Required name="Content"
+                                            ></textarea>
                                             <small>Thêm nội dung của dự án </small>
                                         </div>
                                     </div>
                                     <div class="wpneo-single">
                                         <div class="wpneo-name">Mô tả ngắn gọn</div>
                                         <div class="wpneo-fields">
-                                            <input type="text" Required name="ShortDescribe" class="form-control">
+                                            <textarea class="wp-editor-area" style="height: 200px" autocomplete="off"
+                                            cols="40" Required name="ShortDescribe"
+                                            ></textarea>
                                             <small>Thêm mô tả ngắn gọn của dự án </small>
                                         </div>
                                     </div>
                                     <div class="wpneo-single">
                                         <div class="wpneo-name">Phân loại</div>
-                                        <div class="wpneo-fields"><select name="wpneo-form-category">
+                                        <div class="wpneo-fields"><select name="Category">
                                                 <option value="uncategorized">Chưa phân loại</option>
                                                 <option value="cong-nghe">Công nghệ</option>
                                                 <option value="dich-vu">Dịch vụ</option>
@@ -298,23 +239,17 @@
                                             </select><small>Chọn phân loại dự án của bạn</small></div>
                                     </div>
                                     <div class="wpneo-single">
-                                        <div class="wpneo-name">Hình ảnh</div>
-                                        <div class="wpneo-fields"><input type="text" name="wpneo-form-image-url"
-                                                class="wpneo-upload wpneo-form-image-url" value=""><input type="hidden"
-                                                name="wpneo-form-image-id" class="wpneo-form-image-id" value=""><input
-                                                type="button" id="cc-image-upload-file-button"
-                                                class="wpneo-image-upload float-right" value="Tải hình ảnh"
-                                                data-url="{% url 'dashboard' %}" /><small>Tải lên hình ảnh dự án</small>
+                                        <div class="wpneo-name">Hình ảnh 1</div>
+                                        <div class="wpneo-fields">
+                                            <input type="file" Required name="Image" class="form-control">
+                                                <small>Tải lên hình ảnh dự án</small>
                                         </div>
                                     </div>
                                     <div class="wpneo-single">
-                                        <div class="wpneo-name">Hình ảnh</div>
-                                        <div class="wpneo-fields"><input type="text" name="wpneo-form-image-url"
-                                                class="wpneo-upload wpneo-form-image-url" value=""><input type="hidden"
-                                                name="wpneo-form-image-id" class="wpneo-form-image-id" value=""><input
-                                                type="button" id="cc-image-upload-file-button"
-                                                class="wpneo-image-upload float-right" value="Tải hình ảnh"
-                                                data-url="{% url 'dashboard' %}" /><small>Tải lên hình ảnh dự án</small>
+                                        <div class="wpneo-name">Hình ảnh 2</div>
+                                        <div class="wpneo-fields">
+                                            <input type="file" Required name="Image_Content" class="form-control">
+                                                <small>Tải lên hình ảnh dự án</small>
                                         </div>
                                     </div>
                                     <div class="wpneo-single">
@@ -337,8 +272,6 @@
                                                 <small>Giá của sản phẩm</small>
                                             </div>
                                         </div>
-                                        <div class="wpneo-title"></div>
-                                        <div class="wpneo-text"></div>
                                         <div class="wpneo-requirement-title"><input type="checkbox" value="agree"
                                                 name="wpneo_terms_agree"> Tôi đồng ý với các điều khoản</div>
                                         <div class="wpneo-form-action"><input type="hidden" name="action"
@@ -353,11 +286,10 @@
                 </div>
             </form>
         </section>
-        <div class="bottom footer-wrap">
-            <div class="container">
-            </div>
-        </div>
 
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %} 
 
 </body>
 </html>

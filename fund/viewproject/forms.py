@@ -7,6 +7,7 @@ class ProjectForm(forms.ModelForm):
         self.Owner = kwargs.pop('Owner', None)
         self.RecentFund = kwargs.pop('RecentFund', 0)
         self.IsSuccessfull = kwargs.pop('IsSuccessfull', False)
+        self.Category = kwargs.pop('Category', 'uncategorized')
         super().__init__(*args, **kwargs)
 
     def save(self, commit=True):
@@ -14,8 +15,9 @@ class ProjectForm(forms.ModelForm):
         project.Owner = self.Owner
         project.RecentFund = self.RecentFund
         project.IsSuccessfull = self.IsSuccessfull
+        project.Category = self.Category
         project.save()
 
     class Meta:
         model = Project
-        fields = ["Title", "ShortDescribe", "Content" , "GoalFund",  "Location", "Price" ]#"Category", "Image", "Image_Content", ]
+        fields = ["Title", "ShortDescribe", "Content" , "Image", "Image_Content", "GoalFund",  "Location", "Price" ]

@@ -52,7 +52,7 @@ def XacNhan(request,Project_id):
 def project_form(request):
     form=ProjectForm()
     if request.method== 'POST':
-        form=ProjectForm(request.POST, Owner=request.user,RecentFund=0,IsSuccessfull=False)
+        form=ProjectForm(request.POST, request.FILES, Owner=request.user,RecentFund=0,IsSuccessfull=False, Category=request.POST['Category'])
         if  form.is_valid():
             form.save()
             messages.success(request, 'Tạo dự án thành công!')

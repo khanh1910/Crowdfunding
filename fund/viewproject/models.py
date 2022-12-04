@@ -5,19 +5,20 @@ import os
 
 class Project(models.Model):
     Title=models.CharField(max_length=50)
-    ShortDescribe=models.CharField(default='',max_length=400)
-    Content=models.CharField(default='',max_length=200)
+    ShortDescribe=models.TextField(default='',max_length=70)
+    Content=models.TextField(default='',max_length=50)
     Owner=models.ForeignKey(User,on_delete=models.CASCADE)
     Category_Choices=[
-        ('CN','Công nghệ'),
-        ('Dịch Vụ','Dịch vụ'),
-        ('DL','Du lịch'),
-        ('NN','Nông nghiệp'),
-        ('GD','Giáo dục'),
+        ('uncategorized','Chưa phân loại'),
+        ('cong-nghe','Công nghệ'),
+        ('dich-vu','Dịch vụ'),
+        ('du-lich','Du lịch'),
+        ('nong-nghiep','Nông nghiệp'),
+        ('giao-duc','Giáo dục'),
     ]
     Category=models.CharField(default='',choices=Category_Choices,max_length=20)
-    Image=models.ImageField(null=True)
-    Image_Content=models.ImageField(null=True,blank=True)
+    Image=models.ImageField( null=True, blank=True, upload_to="")
+    Image_Content=models.ImageField( null=True, blank=True,upload_to="")
     GoalFund=models.IntegerField(default=0)
     RecentFund=models.IntegerField(default=0)
     DateEnd=models.DateTimeField(auto_now=True)
