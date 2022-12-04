@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=
     , initial-scale=1.0">
-    <title>Gọi vốn</title>
+    <title>Trang chủ</title>
+    <link rel="icon" href="/static/images/funding.png">
 	<link rel="stylesheet" href = "{% static 'css/index.css' %}" type="text/css">
 
 </head>
@@ -22,7 +23,7 @@
                         <li><a href="/aboutus">Về chúng tôi</a></li>
                         <li><a href="/news">Tin tức</a></li>
                         <li><a href="/projects">Dự án</a></li>
-                        <li><a href="/successproject">Các dự án thành công</a></li>
+                        <li><a href="/projects/success_projects">Các dự án thành công</a></li>
                         {% if user.username %}
                             <li style='margin-right: 2px; text-decoration: none'> Xin chào <a href="">{{user.first_name}} {{user.last_name}}</a></li>| 
                             <li style='margin-left: 2px'><a href="{% url 'logout' %}">Đăng xuất</a></li>
@@ -32,21 +33,22 @@
                         {% endif %}
                     </ul>
                     </div>
-                    <form class="search-bar">
-                        <input type="text" placeholder="Tìm kiếm gì đó ...">
+                    <form  action="/projects/search/" method="post" class="search-bar">
+                        {% csrf_token %}
+                        <input type="text" name="searched" placeholder="Tìm kiếm gì đó ...">
                         <button type="submit"><img src="{% static 'images/search-icon2.png' %}"></button>
                     </form>
                     <ul class="data">
                         <li>
-                            <h3>129838</h3>
+                            <h3>{{countu}}</h3>
                             Người tham gia
                         </li>
                         <li>
-                            <h3>2 đ</h3>
+                            <h3>{{sum}} $</h3>
                             Được ủng hộ
                         </li>
                         <li>
-                            <h3>231</h3>
+                            <h3>{{countp}}</h3>
                             Dự án
                         </li>
                     </ul>
@@ -84,31 +86,31 @@
                 <div class="ct">
                     <ul>
                         <li>
-                            <a href="">
+                            <a href="/projects/category_CN">
                                 <i class="fa-solid fa-microchip"></i>
                                 <h2>Công nghệ</h2> 
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="/projects/category_DV">
                                 <i class="fa-solid fa-taxi"></i>
                                 <h2>Dịch vụ</h2> 
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="/projects/category_DL">
                                 <i class="fa-solid fa-plane"></i>
                                 <h2>Du lịch</h2>
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="/projects/category_NN">
                                 <i class="fa-sharp fa-solid fa-wheat-awn"></i>
                                 <h2>Nông nghiệp</h2>  
                             </a>
                         </li>
                         <li>    
-                            <a href="">
+                            <a href="/projects/category_GD">
                                 <i class="fa-solid fa-school"></i>
                                 <h2>Giáo dục</h2>
                             </a>
@@ -119,93 +121,30 @@
             <div class="success-project">
                 <h2 class="succ-h">Dự án thành công</h2>
                 <div class="sprojects">
+                    {% for item in sucps %}
                     <div class="item">
-                        <img src="{% static 'images/box.jpg' %}" alt="">
+                        <img src="{{ item.Image.url }}" alt="">
                         <div class="item-content">
                             <div class="item-detail">
-                                <h3 class="item-name">Hộp tự gói nhanh</h3>
-                                <p>Chiếc hộp có khả năng tự đóng gói nhanh là sản phẩm vô cùng tiện lợi giúp tiết kiệm thời gian và công sức khi gói hàng</p>
+                                <h3 class="item-name">{{item.Title}}</h3>
+                                <p>{{item.ShortDescribe}}</p>
                             </div>
                             <div class="progress">
                                 <div class="raised">
-                                    <span>₫76,700,000 Raised</span>
+                                    <span><i><b>{{item.RecentFund}}$</b></i>  Raised</span>
                                     <span>153.40%</span>
                                 </div>
-                                <progress max="100" value="150"></progress>
+                                <progress max="{{item.GoalFund}}" value="{{item.RecentFund}}"></progress>
                                 <div class="raised">
-                                    <span>₫50,000,000</span>
-                                    <span>0 Days to Goal</span>
+                                    <span><i><b>{{item.GoalFund}}$</b></i>  Goal</span>
+                                    <span><i><b>{{item.DateEnd}}</b></i></span>
                                 </div>
                             </div>
                         </div>
-                        <a href="">Xem chi tiết</a>
+                        <a href="/projects/Project_{{item.id}}">Xem chi tiết</a>
                     </div>
-                <div class="item">
-                    <img src=" {% static 'images/taptheduc.jpg' %} " alt="">
-                    <div class="item-content">
-                        <div class="item-detail">
-                            <h3 class="item-name">Hộp tự gói nhanh</h3>
-                            <p>Chiếc hộp có khả năng tự đóng gói nhanh là sản phẩm vô cùng tiện lợi giúp tiết kiệm thời gian và công sức khi gói hàng</p>
-                        </div>
-                        <div class="progress">
-                            <div class="raised">
-                                <span>₫76,700,000 Raised</span>
-                                <span>153.40%</span>
-                            </div>
-                            <progress max="100" value="100"></progress>
-                            <div class="raised">
-                                <span>₫50,000,000</span>
-                                <span>0 Days to Goal</span>
-                            </div>
-
-                        </div>
-                    </div>
-                    <a href="">Xem chi tiết</a>
+                {% endfor %}
                 </div>
-                <div class="item">
-                        <img src=" {% static 'images/banhngot.jpg' %}" alt="">
-                        <div class="item-content">
-                            <div class="item-detail">
-                                <h3 class="item-name">Hộp tự gói nhanh</h3>
-                                <p>Chiếc hộp có khả năng tự đóng gói nhanh là sản phẩm vô cùng tiện lợi giúp tiết kiệm thời gian và công sức khi gói hàng</p>
-                            </div>
-                            <div class="progress">
-                                <div class="raised">
-                                    <span>₫76,700,000 Raised</span>
-                                    <span>153.40%</span>
-                                </div>
-                                <progress max="100" value="150"></progress>
-                                <div class="raised">
-                                    <span>₫50,000,000</span>
-                                    <span>0 Days to Goal</span>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="">Xem chi tiết</a>
-                </div>
-                <div class="item">
-                    <img src=" {% static 'images/trongcay.png' %}" alt="">
-                    <div class="item-content">
-                        <div class="item-detail">
-                            <h3 class="item-name">Hộp tự gói nhanh</h3>
-                            <p>Chiếc hộp có khả năng tự đóng gói nhanh là sản phẩm vô cùng tiện lợi giúp tiết kiệm thời gian và công sức khi gói hàng</p>
-                        </div>
-                        <div class="progress">
-                            <div class="raised">
-                                <span>₫76,700,000 Raised</span>
-                                <span>153.40%</span>
-                            </div>
-                            <progress max="100" value="150"></progress>
-                            <div class="raised">
-                                <span>₫50,000,000</span>
-                                <span>0 Days to Goal</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="">Xem chi tiết</a>
-                </div>
-                </div>
-            </div>
             <div class="new">
                 <h2 class="news-head">Tin tức mới</h2>
                 <div class="news">
@@ -248,7 +187,7 @@
                     <ul>
                         <li>
                             <h3>Khám phá các dự án mới trên π/2</h3>
-                            <button ><i class="fa-solid fa-glasses"></i> Khám phá ngay</button>
+                            <button onclick="location.href='/projects'"><i class="fa-solid fa-glasses"></i> Khám phá ngay</button>
                         </li>
                         <li>
                             <h3>Cùng π/2 thực hiện các ý tưởng !</h3>
@@ -263,4 +202,5 @@
         </div>
     </div>
 </body>
+
 </html>

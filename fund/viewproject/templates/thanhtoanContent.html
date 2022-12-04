@@ -8,13 +8,13 @@
     
     <p>Hãy nhập số sản phẩm bạn muốn mua (để góp vốn) bên dưới : </p>
     <input type="number" name="num" min="0" placeholder="Nhập số sản phẩm">
-    <p>Sản phẩm: <i><b>{{p.Title}}</b></i></p>
+    <p>Sản phẩm: <i><b>{{p.Reward}}</b></i></p>
     <p>Đơn giá sản phẩm: <i><b>{{p.Price}}</b></i></p>
     <p>Bạn muốn thanh toán bằng hình thức nào ?</p>
     <div>
         <input type="radio" value="1" name="choice">
         <span>Thanh toán bằng điểm Funding (π) </span>
-        <span>(Bạn đang có <i><b>{{user.Money}}</b></i> điểm)</span>
+        <span>(Bạn đang có <i><b>{{user.Money}}</b></i> $)</span>
     </div>
     <div>
         <input type="radio" value="2" name="choice">

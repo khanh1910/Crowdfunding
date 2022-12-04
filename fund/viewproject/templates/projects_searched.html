@@ -30,9 +30,10 @@
                 </ul>
             </div>
         </div>
-        <span class="title">DỰ ÁN</span>
+        <span class="title">Bạn tìm kiếm : " <i><b>{{searched}} </b></i>"</span>
+        {% if list|length %}
         <div class="success-project">
-            {% for item in Ps %}
+            {% for item in list %}
             <div class="item">
                 <img src="{{ item.Image.url }}" alt="">
                 <div class="item-content">
@@ -47,6 +48,7 @@
                         <progress max="{{item.GoalFund}}" value="{{item.RecentFund}}">khoi</progress>
                         <div class="raised">
                             <span><b>{{item.RecentFund}}$</b> Funded </span>
+                            <span>(<i>153.40%</i>)</span>
                             <p class="date"><b>{{item.DateEnd}}</b> End Project</p>
                         </div>
                     </div>
@@ -54,6 +56,9 @@
             </div>
             {% endfor %}
         </div>
+        {% else %}
+        <h4 style="margin:0 0 0 20px"> Không tìm thấy kết quả nào cho " <i><b>{{searched}}</b></i> "</h3>
+        {% endif %}
     </div>    
 </body>
 </html>

@@ -5,12 +5,15 @@ import os
 
 class Project(models.Model):
     Title=models.CharField(max_length=50)
-    ShortDescribe=models.TextField(default='',max_length=70)
-    Content=models.TextField(default='',max_length=40)
+    ShortDescribe=models.TextField(default='',max_length=80)
+    Content1=models.TextField(default='')
+    Content2=models.TextField(default='',null=True,blank=True)
+    Content3=models.TextField(default='',null=True,blank=True)
+    Content4=models.TextField(default='',null=True,blank=True)
     Owner=models.ForeignKey(User,on_delete=models.CASCADE)
     Category_Choices=[
         ('CN','Công nghệ'),
-        ('Dịch Vụ','Dịch vụ'),
+        ('DV','Dịch vụ'),
         ('DL','Du lịch'),
         ('NN','Nông nghiệp'),
         ('GD','Giáo dục'),
@@ -21,9 +24,12 @@ class Project(models.Model):
     GoalFund=models.IntegerField(default=0)
     RecentFund=models.IntegerField(default=0)
     DateEnd=models.DateTimeField(auto_now=True)
-    IsSuccessfull=models.BooleanField(default=False)
     Location=models.CharField(default='',max_length=50)
+    Reward=models.CharField(default='',max_length=60)
     Price=models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.Title
 
 class FundProject(models.Model):
     Project_Funder=models.ForeignKey(User,on_delete=models.CASCADE)

@@ -16,7 +16,7 @@ body{
     padding-top: 20px;
     height: 700px;
     width: 100%;
-    background-color: #076ebd;
+    background-image:linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.1)),url("/static/images/background2.png");
     background-size: cover;
     background-position: center;
 }
@@ -209,6 +209,7 @@ a{
     width: 25%;
     margin: 0 10px 50px 10px;
     border: solid rgb(219, 214, 214) 0.05px;
+    border-radius: 10px;
 }
 .content .success-project .item .item-content{
     color: rgb(105, 105, 107);
@@ -222,6 +223,7 @@ a{
 .content .success-project .item .item-content .item-detail{
     width: 100%;
     text-align: center;
+    min-height: 100px;
 }
 .content .success-project .item .item-content .item-detail h3{
     margin: 10px 0 20px 0;
