@@ -265,30 +265,27 @@
                         <div id="post-7" class="post-7 page type-page status-publish hentry">
                             <div class="entry-content">
                                 <form type="post" action="" id="wpneofrontenddata">
-
-
                                     <div class="wpneo-single">
                                         <div class="wpneo-name">Tiêu đề</div>
                                         <div class="wpneo-fields">
-                                            {{ form.Title }}
+                                            <input type="text" Required name="Title" class="form-control">
                                             <small>Đặt tiêu đề của dự án </small>
                                         </div>
                                     </div>
                                     <div class="wpneo-single">
                                         <div class="wpneo-name">Nội dung</div>
                                         <div class="wpneo-fields">
-                                            {{ form.Content }}
+                                            <input type="text" Required name="Content" class="form-control">
                                             <small>Thêm nội dung của dự án </small>
                                         </div>
                                     </div>
                                     <div class="wpneo-single">
                                         <div class="wpneo-name">Mô tả ngắn gọn</div>
                                         <div class="wpneo-fields">
-                                            {{ form.ShortDescribe }}
+                                            <input type="text" Required name="ShortDescribe" class="form-control">
                                             <small>Thêm mô tả ngắn gọn của dự án </small>
                                         </div>
                                     </div>
-
                                     <div class="wpneo-single">
                                         <div class="wpneo-name">Phân loại</div>
                                         <div class="wpneo-fields"><select name="wpneo-form-category">
@@ -323,20 +320,20 @@
                                     <div class="wpneo-single">
                                         <div class="wpneo-name">Mục tiêu</div>
                                         <div class="wpneo-fields">
-                                            {{ form.GoalFund }}
+                                            <input type="text" Required name="GoalFund" class="form-control">
                                             <small>Số tiền mục tiêu của dự án</small>
                                         </div>
                                         <div class="wpneo-single">
                                             <div class="wpneo-name">Vị trí</div>
                                             <div class="wpneo-fields">
-                                                {{ form.Location }}
+                                                <input type="text" Required name="Location" class="form-control">
                                                 <small>Thêm vị trí của dự án</small>
                                             </div>
                                         </div>
                                         <div class="wpneo-single">
                                             <div class="wpneo-name">Giá tiền</div>
                                             <div class="wpneo-fields">
-                                                {{ form.Price }}
+                                                <input type="text" Required name="Price" class="form-control">
                                                 <small>Giá của sản phẩm</small>
                                             </div>
                                         </div>
@@ -360,5 +357,7 @@
             <div class="container">
             </div>
         </div>
+
+
 </body>
 </html>

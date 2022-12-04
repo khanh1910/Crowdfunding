@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from .models import Project,FundProject
-from user.models import User
-from django.http import HttpResponseRedirect
+from django.shortcuts import render, redirect
 from django.contrib import messages
 
 from viewproject.models import Project
@@ -56,7 +55,8 @@ def project_form(request):
         form=ProjectForm(request.POST, Owner=request.user,RecentFund=0,IsSuccessfull=False)
         if  form.is_valid():
             form.save()
-            return HttpResponseRedirect(request.path)
+            messages.success(request, 'Tạo dự án thành công!')
+            return redirect('project_form')
         else:
             form=ProjectForm()
     return render(request,"campaign.html", {'form': form})
