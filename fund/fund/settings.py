@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'news',
     'viewproject',
     'infor',
+    'about',
 ]
 
 MIDDLEWARE = [

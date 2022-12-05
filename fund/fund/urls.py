@@ -9,6 +9,7 @@ urlpatterns = [
     path('news/', include('news.urls')),
     path('projects/',include('viewproject.urls')),
     path('infor/',include('infor.urls')),
+    path('about_we/',include('about.urls')),
     path('admin/', admin.site.urls),
 ]
 

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load static %}
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+<style>
+	.cards {
+		display: flex;
+		text-align: center;
+	}
+.card1, .card2, .card3, .card4 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  height: 550px;
+  max-width: 300px;
+  min-height: 550px;
+  text-align: center;
+  font-family: arial;
+  margin: auto auto;
+}
+
+.card1 h1, .card2 h1, .card3 h1, .card4 h1{
+	font-size: 20px;
+}
+
+.title {
+  color: grey;
+  font-size: 15px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center">Nhóm 2</h2>
+
+<div class="cards">
+
+	<div class="card1">
+		<img src="{% static 'images/avt_credit.png' %}" alt="Khan" style="width:100%">
+		<h1>Lê Minh Khan</h1>
+  <p class="title">An toàn thông tin 2020</p>
+  <p>University of Information Technology</p>
+  <div style="margin: 24px 0;">
+	<p>20521430</p>
+</div>
+<p><button>Contact</button></p>
+</div>
+
+<div class="card2">
+	<img src="{% static 'images/avt_credit.png' %}" alt="Khan" style="width:100%">
+	<h1>Ngô Quốc Khôi</h1>
+	<p class="title">Mạng máy tính & truyền thông dữ liệu 2020</p>
+	<p>University of Information Technology</p>
+	<div style="margin: 24px 0;">
+		<p>20521478</p>
+	</div>
+	<p><button>Contact</button></p>
+</div>
+
+<div class="card3">
+	<img src="{% static 'images/avt_credit.png' %}" alt="Khan" style="width:100%">
+	<h1>Đỗ Phùng Gia Bảo</h1>
+	<p class="title">An toàn thông tin 2020</p>
+	<p>University of Information Technology</p>
+	<div style="margin: 24px 0;">
+		<p>20521096</p>
+	</div>
+	<p><button>Contact</button></p>
+</div>
+
+<div class="card4">
+	<img src="{% static 'images/avt_credit.png' %}" alt="Khan" style="width:100%">
+	<h1>Trương Phạm Nhật Huy</h1>
+	<p class="title">An toàn thông tin 2020</p>
+	<p>University of Information Technology</p>
+	<div style="margin: 24px 0;">
+		<p>20521417</p>
+	</div>
+	<p><button>Contact</button></p>
+</div>
+</div>
+</body>
+</html>
