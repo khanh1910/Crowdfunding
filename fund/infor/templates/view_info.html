@@ -1,0 +1,164 @@
+{% extends 'header.html' %}
+
+{% block title %}Thông tin người dùng{% endblock %}
+{% block contents %}
+{% load static %}
+	<style>
+		#conect_bank{
+			background-image: url("{% static 'images/conect_icon.jpg' %}");
+			background-size: cover;
+		}
+
+		#change_pass{
+			background-image: url("{% static 'images/changepass_icon.png' %}");
+			background-size:cover;
+		}
+
+		#add_money{
+			background-image: url("{% static 'images/addmoney_icon.jpg' %}");
+			background-size: cover;
+		}
+	</style>
+	
+	<h1 class="cd">Thông tin người dùng</h1>
+	<div class="fund_info">
+		<div class="fund_money">
+			<div class="name_tag">
+				Số tiền đã góp
+			</div>
+			{{s}} $
+		</div>
+		<div class="avatar">
+			<img src="{{u.Image.url}}" alt="" style="width: 200px; height: 200px; border-radius: 100px;">
+			<div class="user_name">{{u.username}}</div>
+			
+		</div>
+		<div class="fund_project">
+			<div class="name_tag">
+				Số dự án đã góp
+			</div>
+			{{pc}}
+		</div>
+	</div>
+	<div class="box2">
+		<div class="my_project">
+			<div class="project">
+				<div class="in1">
+					<div class="tt">Số dự án</div>
+					<div class="ct"> {{pc3}}</div>
+				</div>
+				<div class="in2">
+					<div class="tt">Dự án thành công</div>
+					<div class="ct">{{pc4}}</div>
+				</div>
+				<div class="in3">
+					<div class="tt">Số tiền nhận</div>
+					<div class="ct">{{pc5}}$</div>
+				</div>
+			</div>
+			<div class="balance">
+				<div class="balance_tt">Số dư :</div>
+				<div class="balance_value">{{pc6}}$</div>
+			</div>
+		</div>
+		<div class="user_info">
+			<h6>Thông tin liên hệ</h6>
+			<ul class="list_info">
+				<li>Họ tên: {{pc7}}</li>
+				<hr>
+				<li>Email: {{pc8}}</li>
+				<hr>
+				<li>Số điện thoại: {{pc9}}</li>
+				<hr>
+			</ul>
+			<div class="conectbt">
+				<div>
+					<button type="button" id="conect_bank" ></button>
+					<div class="conect_ct">Thêm kết nối</div>
+				</div>
+				<div>
+					<button type="button" id="change_pass" ></button>
+					<div class="conect_ct">Đổi mật khẩu</div>
+				</div>
+				<div>
+					<button type="button" id="add_money" ></button>
+					<div class="conect_ct">Nạp tiền</div>
+				</div>
+			</div>
+		</div>
+		{% if messages %}
+	<ul class="messages">
+		 {% for message in messages %}
+		 <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+		 {% endfor %}
+	</ul>
+	{% endif %}
+	</div>
+
+	<div id="popup">
+		<div id="framep">
+			<div class="cancel_btn">
+				<button type="button" id="close_popup">X</button>
+			</div>
+			<div class="tt">Kết nối với:</div>
+			<div class="icon">
+				<img src="{% static 'images/facebook_icon.png' %}" alt="" style="width: 50px; height: 50px; background-color: transparent;" id="facebook_block">
+				<img src="{% static 'images/google_icon.png' %}" alt="" style="width: 50px; height: 50px; background-color: transparent;" id="google_block">
+			</div>
+			<div id="polices">Điều khoản</div>
+		</div>
+	</div>
+
+	<div id="frame_polices">
+		
+		<ol class="polices_content">
+			<div class="polices_tt">
+				Điều khoản
+			</div>
+		<li>Chịu trách nhiệm về những thông tin cá nhân cung cấp cho trang web khi bạn đăng ký sử dụng dịch vụ. </li>
+		<li>Chịu trách nhiệm bảo vệ mật khẩu truy cập, và trách nhiệm của việc đăng nhập bằng mật khẩu của bạn, do hoặc không do bạn trực tiếp đăng nhập. </li>
+		<li>Không được cung cấp các thông tin vi phạm pháp luật, trái với thuần phong mỹ tục, kinh doanh bất hợp pháp, gây hại đến các cá nhân/tổ chức khác. </li>
+		<li>Không được cung cấp các thông tin thuộc sở hữu của chủ thể khác được bảo vệ bởi luật pháp trong và ngoài nước. </li>
+		<li>Không được gây trở ngại, hạn chế cho việc sử dụng dịch vụ của người dùng khác.</li>
+		<li>Không được phát tán các tập tin chứa virus, các chương trình phá hoại, hoặc các tập tin, chương trình phần mềm gây hại đến dịch vụ.</li>
+		<div class="clplc">
+			<button type="button" id="close_polices">ok</button>
+		</div>
+	</ol></div>
+<div id="box3">
+	
+	<form action="{% url 'updatepass' pc11 %}" method="post" class="changepassbox">
+		{% csrf_token %}
+		<div class="header">
+			<button type="button" id="close_box3">X</button>
+		</div>
+		<div class="tt" style="font-size: 18px; color:rgb(80, 80, 80)">Thay đổi mật khẩu</div>
+		<p>Nhập mật khẩu</p>
+		<input type="password" name="check_pass" id="check_pass">
+		<p>Nhập mật khẩu mới</p>
+		<input type="password" name="new_pass" id="new_pass">
+		<p>Nhập lại mật khẩu</p>
+		<input type="password" name="checknew_pass" id="checknew_pass">
+		<input type="submit" value="Xác nhận">
+	</form>
+</div>
+
+
+
+<div id="box_addmoney">
+	<form action="{% url 'moneyadd' pc11 %}" method="post" class="boxct">
+		{% csrf_token %}
+		<div class="header">
+			<button type="button" id="close_boxaddmoney">X</button>
+		</div>
+		<div class="tt" style="font-size: 18px; color:rgb(80, 80, 80)">Nạp tiền</div>
+		<p>Nhập mật khẩu</p>
+		<input type="password" name="check_pass" id="check_pass">
+		<p>Nhập số tiền cần nạp</p>
+		<input type="number" name="money_ex" id="new_pass">
+		<input type="submit" value="Xác nhận" class="submit_money">
+	</form>
+</div>
+
+	<script src="{% static 'js/info.js' %}"></script>
+{% endblock %}

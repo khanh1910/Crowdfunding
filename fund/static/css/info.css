@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lato&display=swap');
+
+*{
+	background-color:#0984e3;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #dfe6e9;
+}
+.contain{
+    width: 100%;
+    margin: 0 auto;
+}
+ul{
+    list-style: none;
+}
+.header{
+    padding-top: 20px;
+    height: 100px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+a{
+    text-decoration: none;
+}
+.header .header-top{
+    margin: 0 auto;
+    width: 85%;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 20px;
+    box-shadow: 1px 5px 10px #0768b3;
+    font-family: 'Lato', sans-serif;
+}
+.header .header-top ul{
+	background-color: transparent;
+    display: flex;
+}
+.header .header-top ul li{
+	background-color: transparent;
+    list-style: none;
+    margin: 0 20px;
+}
+
+.header .header-top ul li a{
+	background-color: transparent;
+}
+.header .header-top ul li:hover{
+    text-decoration: underline;
+}
+.header .header-top #logo{
+	background-color: transparent;
+    font-size: 40px;
+    font-weight:900;
+    display: block;
+    margin-left: 20px;
+    color: #0984e3;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+
+
+.cd {
+	margin: 10px auto;
+	color:brown;
+	text-align: center;
+	font-size: 20px;
+}
+
+
+.fund_info{
+	margin: 10px auto;
+	width: 80%;
+	height: 300px;
+	min-width:650px;
+	border: 0px;
+	border-radius: 10px;
+	display: flex;
+	background: rgba(255, 255, 255, 0.28);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(18.9px);
+	-webkit-backdrop-filter: blur(18.9px);
+	border: 1px solid rgba(255, 255, 255, 0.26);
+}
+
+.fund_money, .fund_project{
+	margin: 100px auto;
+	padding: 39px auto;
+	background:transparent;
+	width: 250px;
+	height: 250px;
+	border: 0px;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 50px;
+}
+
+.fund_money .name_tag, .fund_project .name_tag{
+	font-size: 30px;
+}
+
+.box2{
+	background-color: transparent;
+	margin: 30px auto;
+	width: 80%;
+	height: 300px;
+	min-width:600px;
+	border: 0px;
+	border-radius: 10px;
+	display: flex;
+}
+
+.my_project {
+	background-color: brown;
+	width: 60%;
+	height: 100%;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.28);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(18.9px);
+	-webkit-backdrop-filter: blur(18.9px);
+	border: 1px solid rgba(255, 255, 255, 0.26);
+}
+
+
+.avatar{
+	height: 200px;
+	width: 200px;
+	margin: 39px auto;
+	background-color: transparent;
+	border-radius: 20px;
+}
+
+.user_name{
+	background-color: transparent;
+	margin: 10px;
+	text-align: center;
+}
+
+.name_tag{
+	background-color: transparent;
+}
+
+
+
+.project, .balance{
+	margin: auto;
+	background-color: white;
+	width: 93%;
+	height: 40%;
+	border-radius: 15px;
+	display: flex;
+	box-shadow: 10px 4px 30px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+}
+
+.project {
+	margin: 20px auto;
+	padding: 50px auto;
+	border: 1px;
+}
+
+.in1, .in2, .in3,.tt, .ct{
+	background-color: transparent;
+}
+.in1{
+	/* background-color: red; */
+	margin: auto;
+	width: 100px;
+	height: 100%;
+	text-align: center;
+}
+
+.in2{
+	/* background-color: red; */
+	min-width: 130px;
+	margin: auto;
+	width: 132px;
+	height: 100%;
+	text-align: center;
+}
+
+.in3{
+	/* background-color: red; */
+	margin: auto;
+	width: 170px;
+	height: 100%;
+	text-align: center;
+}
+
+.tt {
+	margin: 18px 0px;
+	color:#343434
+}
+
+.ct {
+	margin: 10px;
+	font-size: 30px;
+}
+
+.balance_tt, .balance_value{
+	height: 100%;
+	background-color: transparent;
+}
+
+.balance_tt{
+	margin: 42px auto;
+	margin-left: 20px;
+	width: 25%;
+	font-size: 30px;
+	overflow: hidden;
+}
+
+.balance_value{
+	margin: 30px auto;
+	width: 70%;
+	font-size: 45px;
+}
+
+.user_info{
+	background-color: white;
+	width: 38%;
+	height: 100%;
+	margin: 0 0 0 auto;
+	border-radius: 20px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(18.9px);
+	-webkit-backdrop-filter: blur(18.9px);
+	border: 1px solid rgba(255, 255, 255, 0.26);
+}
+
+.user_info h6{
+	width: 100%;
+	margin: 10px auto;
+	text-align: center;
+	background-color: transparent;
+	font-size: 13px
+}
+
+.list_info, .list_info li{
+	background-color: transparent;
+}
+
+.list_info{
+	margin: 20px auto;
+	margin-left: 15px;
+}
+
+.list_info li{
+	margin: 10px auto;
+	font-size: 18px;
+}
+
+.conectbt{
+	width: 100%;
+	background-color: transparent;
+	text-align: center;
+	align-items: center;
+	margin: 50px auto;
+	display: flex;
+}
+
+.conectbt div{
+	margin: 0 auto;
+	background-color: transparent;
+}
+
+.conectbt div div{
+	font-size: 9px;
+}
+.conectbt button{
+	margin: 5px auto;
+}
+
+.conectbt #change_pass{
+	margin: auto 20px;
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	border-radius: 10px;
+	border: 1px solid grey;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.conectbt #add_money{
+	margin: auto 20px;
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	border-radius: 10px;
+	border: 1px solid grey;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.conectbt #conect_bank{
+	margin: auto 20px;
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	border-radius: 10px;
+	border: 1px solid grey;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.conectbt #conect_bank:hover{
+	box-shadow: 0 4px 30px rgba(0, 98, 255, 0.3);
+	border: 2px solid grey;
+}
+.conectbt #change_pass:hover{
+	box-shadow: 0 4px 30px rgba(0, 98, 255, 0.3);
+	border: 2px solid grey;
+}
+.conectbt #add_money:hover{
+	box-shadow: 0 4px 30px rgba(0, 98, 255, 0.3);
+	border: 2px solid grey;
+}
+
+.conect_ct{
+	background-color: transparent;
+	color: #6b6b6b;
+}
+
+#popup{
+	width: 100%;
+	height: 100%;
+	background-color: #383737ab;
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	/* transform: translate(0, -808px); */
+	transition: 0.2s;
+}
+
+#popup #framep{
+	margin: 230px auto;
+	background-color: white;
+	width: 390px;
+	height: 200px;
+	padding: 3px;
+	border-radius: 20px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#popup #framep .cancel_btn, #popup #framep .cancel_btn button{
+	background-color: transparent;
+}
+
+#popup #framep .cancel_btn button{
+	width: 20px;
+	height: 20px;
+	text-align: right;
+	border: 0;
+	border-radius: 30px;
+	background-color: red;
+	text-align: center;
+	color: white;
+}
+
+#popup #framep .cancel_btn button:hover{
+	background-color: #0984e3;
+}
+
+#popup #framep .cancel_btn{
+	margin-top: 10px;
+	margin-right: 10px;
+	text-align: right;
+}
+
+.icon{
+	background-color: transparent;
+	display: flex;
+}
+
+.icon img{
+	background-color: transparent;
+	width: 50px;
+	height: 50px;
+	margin: 20px auto;
+}
+
+#framep .tt{
+	text-align: center;
+	margin: 0;
+}
+
+#polices{
+	margin-top: 10px;
+	text-align: center;
+	background-color: transparent;
+}
+
+#polices:hover{
+	color: #0984e3;
+}
+
+#frame_polices{
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+#frame_polices{
+	width: 100%;
+	height: 100%;
+	background-color: #383737ab;
+	opacity: 0;
+	pointer-events: none;
+}
+.polices_content{
+	width: 75%;
+	background-color: white;
+	text-align: justify;
+	margin: 100px auto;
+	padding: 20px;
+	padding-left: 30px;
+	line-height: 1.6;
+	border-radius: 20px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.polices_tt{
+	background-color: transparent;
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.polices_content li{
+	background-color: white;
+}
+.clplc{
+	background-color: transparent;
+	text-align: right;
+}
+
+#close_polices{
+	margin-top: 10px;
+	background-color: rgb(0, 200, 156);
+	width: 50px;
+	height: 30px;
+}
+
+#close_polices:hover{
+	background-color: azure;
+}
+
+#box3{
+	width: 100%;
+	height: 100%;
+	background-color: #303030bb;
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.2s;
+}
+
+#box3 .header{
+	margin: 0 20px 30px auto;
+	padding:0 20px 0 0;
+	width: 100%;
+	height: 20px;
+	background-color: transparent;
+	text-align: right;
+}
+
+#box3 .header #close_box3{
+	width: 25px;
+	height: 25px;
+	border-radius: 100px;
+	background-color: red;
+	color: white;
+	border: 0;
+}
+#box3 .header #close_box3:hover{
+	background-color:#0984e3;
+}
+
+.changepassbox{
+	margin: 50px auto;
+	padding-top: 20px;
+	text-align: center;
+	width: 400px;
+	height: 500px;
+	background-color:aliceblue;
+	border-radius: 20px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.changepassbox p{
+	padding: auto 10px;
+	margin-bottom: -18px;
+	background-color: transparent;
+	text-align: left;
+	color: #4e4e4e;
+}
+
+.changepassbox input{
+	margin: 20px auto;
+	width: 90%;
+	height: 45px;
+	background-color: white;
+	border: 0;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	font-size: 18px;
+}
+
+.messages *{
+	width: 100%;
+	background-color: rgb(251, 255, 0);
+	padding: 5px;
+	font-size: 25px;
+	color: rgb(0, 0, 0);
+}
+.messages{
+	background-color: yellow;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 50px;
+	text-align: center;
+}
+
+#box_addmoney{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: #323232a1;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.2s;
+}
+#box_addmoney *{
+	background-color: transparent;
+}
+#box_addmoney .boxct{
+	width: 50%;
+	height: 320px;
+	margin: 150px auto;
+	background-color:aliceblue;
+	padding: 0 20px;
+	text-align: center;
+	border-radius: 20px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#box_addmoney .header{
+	height: 20px;
+	text-align: right;
+	margin-bottom: 5px;
+}
+
+#box_addmoney .header button{
+	width: 25px;
+	height: 25px;
+	border-radius: 100px;
+	margin-right: 10px;
+	background-color: red;
+	color: white;
+	border: 0;
+	
+}
+
+#box_addmoney .header button:hover{
+	background-color: #0984e3;
+}
+
+#box_addmoney input{
+	background-color: white;
+	width: 80%;
+	height: 35px;
+	margin: 15px;
+	border: 0;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+#box_addmoney .boxct p{
+	text-align: left;
+}
+
+#box_addmoney .submit_money{
+	width: 150px;
+	border: 1px solid black;
+}

@@ -27,7 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'user',
     'news',
-    'viewproject'
+    'viewproject',
+    'infor',
 ]
 
 MIDDLEWARE = [

@@ -1,11 +1,15 @@
-from django.shortcuts import render
 from .models import Project,FundProject
 from user.models import User
+from django.shortcuts import render, redirect
+from django.contrib import messages
+
+from viewproject.models import Project
+from viewproject.forms import ProjectForm
 
 def viewproject(request,Project_id):
     project=Project.objects.get(pk=Project_id)
     user=request.user
-    return render(request, 'Projectviews.html',{"p":project,"u":user})
+    return render(request, 'base1.html',{"p":project,"u":user})
 
 def projects(request):
     Ps=Project.objects.all()
@@ -73,7 +77,7 @@ def search(request):
         if searched in p.Category:
             a.append(p)
             continue
-        if searched in CATE(p.cat):
+        if searched in CATE(p.Category):
             a.append(p)
             continue
         if searched in p.Title:
@@ -104,3 +108,15 @@ def CatePageHome(request,cate):
         "cate":a
         }
     return render(request,"cate_projects.html",context)
+
+def project_form(request):
+    form=ProjectForm()
+    if request.method== 'POST':
+        form=ProjectForm(request.POST, request.FILES, Owner=request.user,RecentFund=0,IsSuccessfull=False, Category=request.POST['Category'])
+        if  form.is_valid():
+            form.save()
+            messages.success(request, 'Tạo dự án thành công!')
+            return redirect('project_form')
+        else:
+            form=ProjectForm()
+    return render(request,"campaign.html", {'form': form})

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %}</title>
+    <title>Xác Nhận Góp Vốn</title>
     <script src="https://kit.fontawesome.com/027f8c7675.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href = "{% static 'css/thanhtoan.css' %}" type="text/css">
     <link rel="icon" href="/static/images/funding.png">
@@ -21,7 +21,7 @@
                     <li><a href="/projects">Dự án</a></li>
                     <li><a href="/projects/success_projects">Các dự án thành công</a></li>
                     {% if user.username %}
-                        <li style='margin-right: 2px; text-decoration: none'> Xin chào <a href="">{{user.first_name}} {{user.last_name}}</a></li>| 
+                        <li style='margin-right: 2px; text-decoration: none'> Xin chào <a href="/infor/User_{{user.id}}">{{user.first_name}} {{user.last_name}}</a></li>| 
                         <li style='margin-left: 2px'><a href="{% url 'logout' %}">Đăng xuất</a></li>
                     {% else %}
                         <li style='margin-right: 2px'><a href="{% url 'register' %}">Đăng ký</a> </li>|
@@ -30,8 +30,28 @@
                 </ul>
             </div>
         </div>
-        {% block contents %}
-        {% endblock %}
+        <h1 class="xn">XÁC NHẬN GÓP VỐN</h1>
+<div class="noi_dung">
+    <form action="{% url 'XN' p.id %}" method="post">
+        {% csrf_token %}
+    
+    <p>Hãy nhập số sản phẩm bạn muốn mua (để góp vốn) bên dưới : </p>
+    <input type="number" name="num" min="0" placeholder="Nhập số sản phẩm">
+    <p>Sản phẩm: <i><b>{{p.Reward}}</b></i></p>
+    <p>Đơn giá sản phẩm: <i><b>{{p.Price}}</b></i></p>
+    <p>Bạn muốn thanh toán bằng hình thức nào ?</p>
+    <div>
+        <input type="radio" value="1" name="choice">
+        <span>Thanh toán bằng điểm Funding (π) </span>
+        <span>(Bạn đang có <i><b>{{user.Money}}</b></i> $)</span>
+    </div>
+    <div>
+        <input type="radio" value="2" name="choice">
+        <span>Thanh toán bằng Thẻ Ngân Hàng </span>
+    </div>
+    <button type="submit">XÁC NHẬN GÓP VỐN</button>
+    </form>
+</div>
     </div>    
 </body>
 </html>

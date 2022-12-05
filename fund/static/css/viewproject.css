@@ -21,6 +21,7 @@ ul{
     width: 100%;
     background-size: cover;
     background-position: center;
+    background-color: #0731bd;
 }
 a{
     text-decoration: none;
@@ -68,7 +69,6 @@ a{
     padding: 20px;
     background-color: #89c0f8;
     border-radius: 7px;
-    border: solid 2px #b0b2b4;
     box-shadow: 1px 5px 10px #044b81;
 }
 .contenttop .left img{
@@ -85,7 +85,7 @@ a{
 }
 .contenttop .right .iown{
     display: block;
-    margin: 20px 0px ;
+    margin: 10px 0px ;
 }
 .contenttop .right .cate{
     margin-top: 10px;
@@ -105,8 +105,9 @@ a{
     margin-top: 20px;
     margin-bottom: 20px;
     height: 15px;
-    width: 500px;
+    width: 90%;
     border-radius: 10px;
+    color: #2e86de;
     border: solid 2px #2e86de;
 }
 .contenttop .right .owner{
@@ -157,9 +158,11 @@ a{
     margin: 20px 0;
     width: 80%;
     margin-bottom: 15px;
+    text-align: justify;
 }
 .project_content .img_content{
-    margin-top: 20px;
+    margin: 20px auto 0 auto;
+    
     width: 700px;
     height: 400px;
     border-radius: 5px;

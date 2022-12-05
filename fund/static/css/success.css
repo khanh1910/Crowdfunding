@@ -57,10 +57,10 @@ a{
 }
 .success{
     border-radius: 3px;
-    border: solid 3px #03410c;
+    border: solid 1px #03410c;
     padding: 10px 20px;
     margin-left: 20px;
-    background-color: #55efc4;
+    background-color: #82ec85;
     width: 400px;
 }
 .success h2{
