@@ -514,7 +514,7 @@ a{
 	font-size: 18px;
 }
 
-.messages, .messages *{
+.messages *{
 	width: 100%;
 	background-color: rgb(251, 255, 0);
 	padding: 5px;
@@ -522,9 +522,12 @@ a{
 	color: rgb(0, 0, 0);
 }
 .messages{
-	margin-top: -20px;
+	background-color: yellow;
+	position: fixed;
+	top: 0;
+	left: 0;
 	height: 50px;
-	text-align: center
+	text-align: center;
 }
 
 #box_addmoney{
